@@ -18,8 +18,7 @@ class SchedRR : public SchedBase {
 		int next(int cpu);
 		int cores;
 		std::vector<int> execution_time;
-		std::vector<int> process;
-		// list<int> quantum;	TODOS LOS PROCESOS TIENEN EL MISMO QUANTUM?
+		std::queue<int> process;
 };
 
 #endif

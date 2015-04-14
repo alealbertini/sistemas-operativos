@@ -48,7 +48,6 @@ int SchedRR::tick(int cpu, const enum Motivo m) {
 }
 
 int SchedRR::next(int cpu) {
-	// HAY QUE DECIDIR SI CADA CPU VA A TENER SU PROPIO VECTOR DE PROCESOS
-	// O HAY UN SOLO VECTOR PARA TODAS LAS CPU.
+	// HAY UN SOLO VECTOR PARA TODAS LAS CPU.
 	process.front();
 }
