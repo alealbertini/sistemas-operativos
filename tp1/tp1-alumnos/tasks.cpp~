@@ -1,6 +1,5 @@
 #include "tasks.h"
 #include <iostream>
-#include <cstdlib>
 using namespace std;
 
 void TaskCPU(int pid, vector<int> params) { // params: n
@@ -50,4 +49,3 @@ void tasks_init(void) {
 	register_task(TaskConBloqueo,3);
 	register_task(TaskConsola,1);
 }
-

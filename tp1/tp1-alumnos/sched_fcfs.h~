@@ -18,9 +18,8 @@ class SchedFCFS : public SchedBase {
 
 	private:
 		int cores;
-		queue<int> q;
+		std::queue<int> q;
 		vector<int> execution_time;
 };
 
 #endif
-
