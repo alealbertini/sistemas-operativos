@@ -28,7 +28,7 @@ class SchedBase {
 	 * El parámetro m indica si en la ejecución del último ms, la tarea:
 	 *  - BLOCK: Ejecutó una syscall bloqueante
 	 *  - EXIT: Terminó (return)
-	 *  - TICL: Consumió el CPU todo el milisegundo.
+	 *  - TICK: Consumió el CPU todo el milisegundo.
 	 * Esta función devuelve qué pid utilizará el CPU ahora, o IDLE_TASK. */
 	virtual int tick(int cpu, const enum Motivo m) = 0;
 };

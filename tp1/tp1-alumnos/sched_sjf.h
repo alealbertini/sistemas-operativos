@@ -19,8 +19,8 @@ class SchedSJF : public SchedBase {
 	private:
 		int cores;
 		priority_queue< pair<int,int>, 
-		vector< pair<int,int> >,
-		greater< pair<int,int> > > q;
+			vector< pair<int,int> >,
+		   	greater< pair<int,int> > > q;
 		vector<int> execution_time;
 		vector<int> task_for_cpu;
 		void assign();

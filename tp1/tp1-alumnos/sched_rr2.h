@@ -8,7 +8,7 @@
 class SchedRR2 : public SchedBase {
 	public:
 		SchedRR2(std::vector<int> argn);
-        	~SchedRR2();
+        ~SchedRR2();
 		virtual void initialize() {};
 		virtual void load(int pid);
 		virtual void unblock(int pid);
@@ -16,6 +16,9 @@ class SchedRR2 : public SchedBase {
 
 	private:
 		int next(int cpu);
+		int cores;
+		std::vector< std::queue<int> > cola_de_cpu;
+		std::vector< std::vector<int> > execution_time;
 };
 
 #endif

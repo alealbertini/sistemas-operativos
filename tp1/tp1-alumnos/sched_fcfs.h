@@ -17,10 +17,7 @@ class SchedFCFS : public SchedBase {
 		virtual int tick(int cpu, const enum Motivo m);
 
 	private:
-		int cores;
-		queue<int> q;
-		vector<int> execution_time;
+		std::queue<int> q;
 };
 
 #endif
-

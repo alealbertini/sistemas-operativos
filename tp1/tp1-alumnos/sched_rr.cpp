@@ -16,15 +16,19 @@ SchedRR::SchedRR(vector<int> argn) {
 }
 
 SchedRR::~SchedRR() {
-
 }
 
 
 void SchedRR::load(int pid) {
-	process.push_back(pid);
+	process.push(pid);
 }
 
 void SchedRR::unblock(int pid) {
+	if(execution_time[pid] > 0){
+		process.push(pid);
+	}else{
+		execution_time[pid] = 0;	
+	}
 }
 
 int SchedRR::tick(int cpu, const enum Motivo m) {
@@ -36,18 +40,23 @@ int SchedRR::tick(int cpu, const enum Motivo m) {
 			return sig;
 		}
 	} else {
-		// Siempre sigue el pid actual mientras no termine.
-		/*if (current_pid(cpu) == IDLE_TASK && !process.empty()) {
+		if (current_pid(cpu) == IDLE_TASK && !process.empty()) {
 			int sig = process.front(); 
 			return sig;
-		} else {
-			return current_pid(cpu);
-		}*/
-		// HABRIA QUE MIRAR SI LE QUEDA TIEMPO DE EJECUCION AL PROCESO O SI SE TERMINO EL QUANTUM?
+		} else if(!process.empty()){
+					execution_time[current_pid(cpu)]--;
+					if(execution_time[current_pid(cpu)] > 0){
+
+					}		
+				}
+		// SI SE TERMINO EL QUANTUM?
 	}
 }
 
 int SchedRR::next(int cpu) {
-	// HAY UN SOLO VECTOR PARA TODAS LAS CPU.
-	process.front();
+	// HAY UN SOLO VECTOR GLOBAL DE PROCESOS PARA TODAS LAS CPU.
+	int result = process.front();
+	process.pop();
+	return result;
+
 }

@@ -19,6 +19,7 @@ class SchedRR : public SchedBase {
 		int cores;
 		std::vector<int> execution_time;
 		std::queue<int> process;
+		int quantum;
 };
 
 #endif

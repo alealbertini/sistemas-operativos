@@ -33,6 +33,23 @@ void TaskConBloqueo(int pid, vector<int> params) {
 	}
 }
 
+void TaskBatch(int pid, vector<int> params){	// params: total_cpu, cant_bloqueos
+	int total_cpu = params[0];
+	int cant_bloqueos = params[1];
+
+	for(int i=0; i < cant_bloqueos; i++){
+		
+		int inicioBloq = rand();		// QUE PASA SI EL NUM ALEATORIO ES MENOR Q EL TIEMPO ACTUAL? O SEA, ES MENOR QUE LO QUE LLEVAMOS ACUMULADO
+
+		if(inicioBloq > total_cpu){
+			uso_CPU(pid, total_cpu);		// SI EL NUM ALEATORIO ES > Q EL TIEMPO TOTAL, EJECUTO SIEMPRE LA CPU
+		}else{
+			uso_CPU(pid, inicioBloq-1);    // SINO EJECUTO HASTA EL INICIO DEL BLOQUEO-1 Y LUEGO EJECUTO EL BLOQUEO DURANTE 1 MILISEGUNDO 
+			uso_IO(pid, 1);
+		}
+	}
+}
+
 void TaskConsola(int pid, vector<int> params) {  // params: n, bmin, bmax
 	for(int i = 0; i < params[0]; i++){
 		int numAleatorio = (rand() % params[2]) + params[1]; // genera un numero aleatorio entre bmin y bmax
@@ -48,6 +65,6 @@ void tasks_init(void) {
 	register_task(TaskIO, 2);
 	register_task(TaskAlterno, -1);
 	register_task(TaskConBloqueo,3);
-	register_task(TaskConsola,1);
+	register_task(TaskConsola,3);
 }
 

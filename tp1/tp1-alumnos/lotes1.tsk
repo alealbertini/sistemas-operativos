@@ -1,0 +1,6 @@
+@2:
+TaskCPU 5
+@10:
+TaskConsola 1 1 2
+@3:
+TaskConsola 4 1 3
