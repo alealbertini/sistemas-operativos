@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <queue>
+#include <algorithm>
 #include "basesched.h"
 
 using namespace std;
@@ -17,7 +18,11 @@ class SchedFixed : public SchedBase {
 		virtual int tick(int cpu, const enum Motivo m);
 
 	private:
-		std::queue<int> q;
+		//std::queue<int> q;
+		std::priority_queue< pair<int, int>,
+				     vector<pair<int, int> >,
+				     greater<pair<int, int> > 
+				   > listos;
 };
 
 #endif
