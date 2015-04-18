@@ -22,7 +22,7 @@ class SchedDynamic : public SchedBase {
 		priority_queue< pair<int, int>,
 				vector<pair<int, int> >,
 				greater<pair<int, int> >
-			      > listos;
+			      > *listos;
 		map<int, int> deadlines;
 		
 };
