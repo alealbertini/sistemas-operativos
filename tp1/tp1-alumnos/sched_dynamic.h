@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <queue>
+#include <map>
 #include "basesched.h"
 
 using namespace std;
@@ -17,7 +18,13 @@ class SchedDynamic : public SchedBase {
 		virtual int tick(int cpu, const enum Motivo m);
 
 	private:
-		std::queue<int> q;
+		int n_ticks;
+		priority_queue< pair<int, int>,
+				vector<pair<int, int> >,
+				greater<pair<int, int> >
+			      > listos;
+		map<int, int> deadlines;
+		
 };
 
 #endif
