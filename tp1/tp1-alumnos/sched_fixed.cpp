@@ -33,7 +33,7 @@ int SchedFixed::tick(int cpu, const enum Motivo m) {
 		int curr_pid = current_pid(cpu);
 		sig_pid = curr_pid;
 		if( hay_listos ){
-			if ((curr_pid != IDLE_TASK) && (period(curr_pid) > listos.top().first)){
+			if ((curr_pid == IDLE_TASK) || (period(curr_pid) > listos.top().first)){
 				sig_pid = listos.top().second;
 				listos.pop();
 				listos.push(make_pair<int, int>(period(curr_pid), curr_pid));
