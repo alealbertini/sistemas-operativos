@@ -1,0 +1,101 @@
+\section{Resultados}
+
+\subsubsection*{Experimentos sobre el grado del polinomio interpolador}
+
+\includegraphics[scale=0.5]{graficos/gradoPol.png}
+
+Para el experimento sobre el grado del polinomio se corrieron todas las
+instancias de las carpetas rectas, cuadráticas y cubicas provistas por la
+cátedra.  Cada una de estas instancias se corrió para cada grado del polinomio,
+por lo tanto se probaron 15 instancias por grado variando el grado de 1 a 8.
+
+\begin{verbatim}
+Cantidad de aciertos sobre 15 instancias
+grado 1: 8 
+grado 2: 10
+grado 3: 13
+grado 4: 13
+grado 5: 13
+grado 6: 10
+grado 7: 9
+grado 8: 8
+\end{verbatim}
+
+
+Los resultados se encuentran en el archivo visualizador/resultados/testGradoPol.out
+
+\subsubsection*{Experimentos sobre el tamaño del historial}
+
+\includegraphics[scale=0.5]{graficos/kPuntos.png}
+
+Para el experimento del historial se utilizaron las siguientes instancias:
+
+\begin{itemize}
+  \item Curvas no atajas por el arquero anterior:
+  \begin{itemize}
+    \item cl.tiro
+    \item c3.tiro
+  \end{itemize}
+ \item Curvas atajadas por el arquero anterior:
+  \begin{itemize}
+    \item c2.tiro
+    \item r1.tiro
+    \item cb1.tiro
+  \end{itemize}
+  \item Trayectos que no describen curvas exactas no probadas en el arquero anterior: 
+  \begin{itemize}
+   \item 1.tiro
+   \item 2.tiro
+   \item 3.tiro
+   \item 4.tiro
+   \end{itemize}
+\end{itemize}
+
+Se considera k=25 como el polinomio armado con todos los puntos de la
+instancia, ya que ninguna instancia supera este numero de puntos.  Los
+resultados son:
+
+\begin{itemize}
+\item Para K=25:
+  \begin{itemize}
+    \item Atajo: c2.tiro, r1.tiro, cb1.tiro,3.tiro,4.tiro
+    \item No atajo: c1.tiro, c3.tiro, 1.tiro, 2.tiro
+  \end{itemize}
+\item Para K$\neq$25:
+  \begin{itemize}
+    \item Atajo: c2.tiro(exceptuando k=5), r1.tiro, cb1.tiro,3.tiro,4.tiro
+    \item No atajo: c1.tiro, c3.tiro, 1.tiro, 2.tiro
+  \end{itemize}
+\end{itemize}
+
+Los resultados se encuentran en el archivo visualizador/resultados/testK.out
+
+Dado que las pruebas no mejoran ni empeoran el rendimiento de arquero al variar
+este parámetro decidimos no limitar la cantidad de puntos tomados para nuestra
+implementación final del robot.
+
+\subsubsection*{Experimentos sobre las tácticas del arquero}
+
+\includegraphics[scale=0.5]{graficos/tacticas.png}
+
+En este grafico 0 significa sin tácticas, 1 significa solo táctica 1 y
+2 solo táctica 2.
+
+Para el experimento sobre las tácticas se utilizaron las instancias contenidas
+en las carpetas fancy, instancia2 e instancias3.  Las parámetros se realizaron
+con los parámetros $g=3$ y $k$ sin acotar.  Los resultados se encuentran en el
+archivo visualizador/resultados/tac1ytac2.out
+
+
+\includegraphics[scale=0.5]{graficos/grado_pol.png}
+
+\includegraphics[scale=0.5]{graficos/grado_con_ruido30.png}
+\includegraphics[scale=0.5]{graficos/grado_con_ruido70.png}
+
+\includegraphics[scale=0.5]{graficos/cbp30_noRuido.png}
+\includegraphics[scale=0.5]{graficos/cbp30_Ruido.png}
+\includegraphics[scale=0.5]{graficos/cbp70_Ruido.png}
+\includegraphics[scale=0.5]{graficos/cbp70_noRuido.png}
+\includegraphics[scale=0.5]{graficos/rp70_noRuido.png}
+\includegraphics[scale=0.5]{graficos/rp70_Ruido.png}
+

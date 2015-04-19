@@ -1,0 +1,99 @@
+\documentclass[11pt,a4paper,spanish]{article}
+
+%--- Paquete para ajustar los margenes
+\usepackage[a4paper,left=3cm,right=2cm]{geometry}
+%\usepackage{anysize} 
+%\marginsize{3cm}{3cm}{2cm}{2cm} 
+
+%--- Paquete para escribir en español.
+\usepackage[spanish, activeacute]{babel}
+
+%--- Paquetes para meter los caracteres acencuados en Linux las dos codificaciones.
+\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
+%--- Paquete para meter los caracteres acentuados en Windows.
+%\usepackage[ansinew]{inputenc}
+
+%--- Paquete para insertar imagenes.
+\usepackage[pdftex]{color, graphicx}
+
+%--- Paquete para los hipervinculos, cambio los colores horribles por defecto.
+\usepackage[pdftex, colorlinks=true, urlcolor=blue, linkcolor=blue]{hyperref}
+
+%--- Paquete para meteter las figuras exactamente donde yo quiero en un entorno
+%---- figure aunque queden feas.
+\usepackage{float}
+%--- Paquete para el lo que escribo en el .tex salga igual en .pdf aunque quede feo.
+\usepackage{verbatim}
+
+%--- Paquete para usar letras que se usan en matematica.
+\usepackage{amsfonts}
+%--- Paquete para escribir expresiones matematicas.
+\usepackage{amsmath}
+
+\usepackage[table]{xcolor}
+
+\usepackage[showlabels,sections,floats,textmath,displaymath]{preview}
+
+
+% Esto sirve para incluir palabras claves
+\newcommand{\keywords}[1]{\par\vskip11pt\hskip10pt\noindent{\small{\bf Palabras Claves\/}: #1}}
+\newtheorem{proposition}{Proposición}
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+
+\newcommand{\real}{\mathbb{R}}
+
+
+%-------------- TP ------------------------------------------------------------
+\begin{document}
+
+%-------------- Caratula-------------------------------------------------------
+\thispagestyle{empty}
+\begin{center}
+
+\includegraphics[width=0.18\textwidth]{escudo.png} \\[2em]
+
+\begin{bf}
+  Sistemas Operativos \\
+  Departamento de Computación \\
+  Facultad de Ciencias Exactas y Naturales \\
+  Universidad de Buenos Aires \\[1.5em]
+\end{bf}
+
+{\large \bf Trabajo Práctico 1: \\ Scheduling} \\[2em]
+
+\begin{tabular}{ll}
+  Adrian Vinocur & \href{mailto:adrian.vinocur@gmail.com}{adrian.vinocur@gmail.com} \\
+  Alejandro Albertini & \href{mailto:ale.dc@hotmail.com}{ale.dc@hotmail.com} \\
+  Raul Brum & \href{mailto:brumraul@gmail.com}{brumraul@gmail.com} \\[2em]
+\end{tabular}
+
+
+\begin{abstract}
+  En este trabajo estudiaremos el problema de planificar (scheduling) la ejecucición de tareas. Analizaremos de manera experimental algunos de los algoritmos clasicos como FCFS, Round Robin. Además analizaremos otros que utilizan prioridades para resolver el problema de planificación en tiempo real como RM (Rate Monotonic) y EDF (Earlier Deadline First).
+
+\end{abstract}
+
+\keywords{Scheluder, Scheduling, FCFS, Round Robin, RM, Rate Monotonic, EDF, Earlier Deadline First, Quantum}
+
+\end{center}
+
+
+%-------------- Tabla de contenido  -------------------------------------------
+\newpage
+\tableofcontents
+
+%-------------- Cuerpo  -------------------------------------------------------
+
+\include{introduccion}
+\include{desarrollo}
+%\include{resultados}
+%\include{discusion}
+\include{conclusiones}
+
+%\bibliographystyle{plain}
+%\bibliography{tp3}
+
+\end{document}
+
