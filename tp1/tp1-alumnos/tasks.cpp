@@ -36,17 +36,23 @@ void TaskConBloqueo(int pid, vector<int> params) {
 void TaskBatch(int pid, vector<int> params){	// params: total_cpu, cant_bloqueos
 	int total_cpu = params[0];
 	int cant_bloqueos = params[1];
+	int cant = cant_bloqueos;
+	int cant_ticks = 0;
 
 	for(int i=0; i < cant_bloqueos; i++){
-		
-		int inicioBloq = rand();		// QUE PASA SI EL NUM ALEATORIO ES MENOR Q EL TIEMPO ACTUAL? O SEA, ES MENOR QUE LO QUE LLEVAMOS ACUMULADO
+		// inicioBloq es el numero de tick donde comienza a ejecutarse la llamada bloqueante
+		int inicioBloq = (rand() % total_cpu) - cant;	
+		// lo acomodo dentro del rango posible porque rand me puede tirar cualquier numero aleatorio
 
-		if(inicioBloq > total_cpu){
-			uso_CPU(pid, total_cpu);		// SI EL NUM ALEATORIO ES > Q EL TIEMPO TOTAL, EJECUTO SIEMPRE LA CPU
-		}else{
-			uso_CPU(pid, inicioBloq-1);    // SINO EJECUTO HASTA EL INICIO DEL BLOQUEO-1 Y LUEGO EJECUTO EL BLOQUEO DURANTE 1 MILISEGUNDO 
-			uso_IO(pid, 1);
-		}
+		uso_CPU(pid, inicioBloq - cant_ticks - 1);  
+		// uso la cpu desde que finalizo la ultima llamada bloqueante hasta que aparezca la nueva llamada bloqueante   
+		uso_IO(pid, 1);
+
+		cant--;
+		cant_ticks = inicioBloq + 1;
+		// cant_ticks es la cantidad de ticks que usamos en total hasta el momento
+		total_cpu -= cant_ticks;
+		// total_cpu es la cantidad de ticks que me quedan disponibles para usar.
 	}
 }
 
@@ -65,6 +71,7 @@ void tasks_init(void) {
 	register_task(TaskIO, 2);
 	register_task(TaskAlterno, -1);
 	register_task(TaskConBloqueo,3);
-	register_task(TaskConsola,3);
+	register_task(TaskConsola, 3);
+	register_task(TaskBatch, 2);
 }
 

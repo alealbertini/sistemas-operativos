@@ -3,6 +3,8 @@
 
 #include <vector>
 #include <queue>
+#include <algorithm>
+#include <utility> 
 #include "basesched.h"
 
 class SchedRR : public SchedBase {
@@ -17,9 +19,8 @@ class SchedRR : public SchedBase {
 	private:
 		int next(int cpu);
 		int cores;
-		std::vector<int> execution_time;
-		std::queue<int> process;
-		int quantum;
+		std::queue< std::pair<int, int> > process;
+		std::vector<int> cpu_quantum;
 };
 
 #endif
