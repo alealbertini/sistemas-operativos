@@ -17,60 +17,65 @@ SchedRR::SchedRR(vector<int> argn) {
 SchedRR::~SchedRR() {
 }
 
+void initialize() {
+	for(int core=1; core<=cores; core++){
+		remaining_q_per_core[core] = TaskQuantumPair(IDLE_TASK, 0);
+	} 
+}
+
 
 void SchedRR::load(int pid) {
-	process.push(make_pair<int, int>(0, pid));
+	process.push(pid);
 }
 
 void SchedRR::unblock(int pid) {
-	if(process.front().first > 0){
-		process.push(make_pair<int, int>(process.front().first, pid));
-	}else{
-		process.pop();	
-	}
+	process.push(pid);
 }
 
 int SchedRR::tick(int cpu, const enum Motivo m) {
 	int sig;
-	if (m == EXIT) {
-		// Si el pid actual terminó, sigue el próximo.
-		if (process.empty()){
-			int sig = IDLE_TASK;
-		} else {
-			// saco el primero de la lista porque ya termino y sigue el siguiente de la lista
-			process.pop();
-			int sig = process.front().second; 
+	if(m == EXIT){
+		sig = next();
+		loadOnCore(sig, cpu);
+	}
+	else if(m == TICK){
+		TaskQuantumPair runningTask = remaining_q_per_core[cpu];
+		// Si no hay mas quantum, pasar a la siguiente tarea
+		if(runningTask.second <= 0){
+			sig = next();
+			loadOnCore(sig, cpu);
+			// la tarea actual pasa a Ready: al final de la cola.
+			process.push(runningTask.first);
 		}
-	} else if (m==TICK) {
-		// Le resto un tick al proceso actual
-		process.front().first--;
-		if ( !process.empty()) {
-			if(process.front().first > 0){
-				int sig = process.front().second;
-			}else {
-				// si se le acabo el quantum lo pongo al final de la cola
-				// y cuando esta por ejecutarse de vuelta le asigno el quantum segun el cpu al que va a entrar
-				process.push(make_pair<int, int>(0, process.front().second));  // no tendria que usar current_pid(cpu)?
-				process.pop();
-			}
-		} else {
-			int sig = IDLE_TASK;		// puede llegar aca?	
-		}			
-	} else {  // BLOQ
-		if ( !process.empty() ){
-			process.pop();
-			int sig = process.front().second;
-		}else {
-			int sig = IDLE_TASK;
+		else {
+			// La tarea sigue corriendo
+			runningTask.second -= 1;
+			sig = runningTask.first;
 		}
+	}
+	else {  // BLOQ
+		sig = next();
+		loadOnCore(sig, cpu);
 	}
 	
 	return sig;
 }
 
-int SchedRR::next(int cpu) {
-	// HAY UN SOLO VECTOR GLOBAL DE PROCESOS PARA TODAS LAS CPU.
-	int pid_sig = process.front().second;
-	process.front().first = cpu_quantum[cpu];
-	return pid_sig;
+void loadOnCore(int pid, int core){
+	remaining_q_per_core[core].first = pid;
+	
+	// resolver el quantum de la tarea (0 si es IDLE)
+	if(pid == IDLE_TASK){
+		remaining_q_per_core[core].second = 0;
+	}
+	else {
+		remaining_q_per_core[core].second = cpu_quantum[core];
+	}
+}
+
+int SchedRR::next() {
+	if(process.empty()){
+		return IDLE_TASK;
+	}
+	return process.pop();
 }
