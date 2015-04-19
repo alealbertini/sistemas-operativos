@@ -44,8 +44,6 @@ int SchedDynamic::tick(int cpu, const enum Motivo m) {
 			deadlines[sig_pid] = listos->top().first;
 			listos->pop();
 		} 
-		if(deadlines.size()==0)
-			exit(13);
 		deadlines.erase(curr_pid);
 	} else if ( m==TICK ){
 		sig_pid = curr_pid;
@@ -56,6 +54,10 @@ int SchedDynamic::tick(int cpu, const enum Motivo m) {
 				sig_pid = mejor_listo_pid;
 				deadlines[sig_pid] = mejor_listo_deadline;
 				listos->pop();
+				if( curr_pid != IDLE_TASK ){
+					listos->push(make_pair<int, int>(deadlines[curr_pid], curr_pid));
+					deadlines.erase(curr_pid);
+				}
 			}
 		}
 	} else {  //m==BLOCK
