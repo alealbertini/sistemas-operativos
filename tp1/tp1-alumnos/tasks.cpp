@@ -57,8 +57,11 @@ void TaskBatch(int pid, vector<int> params){	// params: total_cpu, cant_bloqueos
 }
 
 void TaskConsola(int pid, vector<int> params) {  // params: n, bmin, bmax
-	for(int i = 0; i < params[0]; i++){
-		int numAleatorio = (rand() % params[2]) + params[1]; // genera un numero aleatorio entre bmin y bmax
+	int n = params[0];
+	int bmin = params[1];
+	int bmax = params[2];
+	for(int i = 0; i < n; i++){
+		int numAleatorio = (rand() % (bmax-bmin+1)) + bmin; // genera un numero aleatorio entre bmin y bmax
 		uso_IO(pid, numAleatorio); // Uso IO "numAleatorio" milisegundos.
 	}
 }
