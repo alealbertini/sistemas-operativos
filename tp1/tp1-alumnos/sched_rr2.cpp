@@ -27,7 +27,7 @@ void SchedRR2::initialize() {
 }
 
 SchedRR2::~SchedRR2() {
-	
+
 }
 
 // Selecciona el core con menos carga
@@ -58,7 +58,7 @@ void SchedRR2::unload(int pid) {
 	if(pid != IDLE_TASK){
 		int core = affinity[pid];
 		// remuevo afinidad
-		map<int,int>::iterator iter = affinity.find(1) ;
+		map<int,int>::iterator iter = affinity.find(pid);
 		affinity.erase(iter);
 		
 		// decremento la cantidad de procesos activos del core
