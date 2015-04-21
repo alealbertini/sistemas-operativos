@@ -6,6 +6,8 @@
 
 enum Motivo { TICK, BLOCK, EXIT };
 
+typedef std::pair<int, int> TaskQuantumPair;
+
 class SchedBase {
 	public:
 

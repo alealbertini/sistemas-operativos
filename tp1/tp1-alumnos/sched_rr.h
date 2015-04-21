@@ -8,8 +8,6 @@
 #include <utility> 
 #include "basesched.h"
 
-typedef std::pair<int, int> TaskQuantumPair;
-
 class SchedRR : public SchedBase {
 	public:
 		SchedRR(std::vector<int> argn);

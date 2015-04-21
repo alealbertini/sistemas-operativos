@@ -49,12 +49,14 @@ int SchedRR::tick(int cpu, const enum Motivo m) {
 		//cerr << "TICK. Esta corriendo: " << runningTask.first << ". Le quedan: " << runningTask.second << endl;
 		// Si no hay mas quantum, pasar a la siguiente tarea
 		if(runningTask.second <= 1){
-			sig = next();
-			loadOnCore(sig, core);
 			// la tarea actual pasa a Ready: al final de la cola.
 			if(runningTask.first != IDLE_TASK){
 				process.push(runningTask.first);
 			}
+			
+			// paso a la siguiente tarea (puede ser la misma si no queda otra)
+			sig = next();
+			loadOnCore(sig, core);
 			//cerr << "El proximo es: " << sig << endl;
 		}
 		else {
