@@ -38,14 +38,18 @@ void TaskConBloqueo(int pid, vector<int> params) {
 void TaskBatch(int pid, vector<int> params){
         int total_cpu = params[0];
         int cant_bloqueos = params[1];
+	
+        //Se necesitan al menos 1 de cpu para lanzar cada llamada bloqueante.
+        if(total_cpu < cant_bloqueos)
+                total_cpu = cant_bloqueos;
 
-    //Inicializamos la semilla de la secuencia de numeros aleatorios.
+        //Inicializamos la semilla de la secuencia de numeros aleatorios.
         srand(time(NULL));
 
         //En este vector vamos a guardar los ticks en los que hay llamadas bloqueantes
         //ticks_bloq[i] == 1 => en el tick i se usa CPU y hay una llamada bloqueante.
         //ticks_bloq[i] == 0 => en el tick i solo se usa CPU
-    vector<int> ticks_bloq;
+        vector<int> ticks_bloq;
         ticks_bloq.resize(total_cpu, 0);
 
         int ticks_disponibles = total_cpu;
@@ -72,13 +76,15 @@ void TaskBatch(int pid, vector<int> params){
         //Juntamos todos el uso de CPU consecutivo, si encontramos una llamada bloqueante "flusheamos" el uso de CPU.
         int cpu_acumulado = 0;
         for(int i=0; i < total_cpu; i++){
-                cpu_acumulado++;
 
                 if(ticks_bloq[i]==1){
-                        uso_CPU(pid, cpu_acumulado);
+			if(cpu_acumulado > 0)
+                        	uso_CPU(pid, cpu_acumulado);
                         uso_IO(pid, 1);
                         cpu_acumulado = 0;
-                }
+                } else {
+			cpu_acumulado++;
+		}
         }
         //Si no hubo llamada bloqueante en el ultimo tick, hay que informar el uso de CPU restante.
         if(cpu_acumulado>0){
