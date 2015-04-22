@@ -92,30 +92,6 @@ void TaskBatch(int pid, vector<int> params){
         }
 
 }
-/*
-void TaskBatch(int pid, vector<int> params){	// params: total_cpu, cant_bloqueos
-	int total_cpu = params[0];
-	int cant_bloqueos = params[1];
-	int cant = cant_bloqueos;
-	int cant_ticks = 0;
-
-	for(int i=0; i < cant_bloqueos; i++){
-		// inicioBloq es el numero de tick donde comienza a ejecutarse la llamada bloqueante
-		int inicioBloq = (rand() % total_cpu) - cant;	
-		// lo acomodo dentro del rango posible porque rand me puede tirar cualquier numero aleatorio
-
-		uso_CPU(pid, inicioBloq - cant_ticks - 1);  
-		// uso la cpu desde que finalizo la ultima llamada bloqueante hasta que aparezca la nueva llamada bloqueante   
-		uso_IO(pid, 1);
-
-		cant--;
-		cant_ticks = inicioBloq + 1;
-		// cant_ticks es la cantidad de ticks que usamos en total hasta el momento
-		total_cpu -= cant_ticks;
-		// total_cpu es la cantidad de ticks que me quedan disponibles para usar.
-	}
-}
-*/
 
 void TaskConsola(int pid, vector<int> params) {  // params: n, bmin, bmax
 	int n = params[0];
