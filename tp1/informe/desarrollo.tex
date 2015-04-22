@@ -1,10 +1,77 @@
 \section{Desarrollo}
 
 \subsection{Ejercicio 1}
-TODO: AGREGAR ALGO
+
+La tarea TaskConsola simula una tarea interactiva en donde realiza $n$ llamadas bloqueantes de duración de tiempo aleatoria entre $bmin$ y $bmax$. Se pasa por parámetro la variable pid, y un vector con las variables $n$, $bmin$ y $bmax$, en ese orden. \\
+
+Se coloca un ciclo for donde se itera $n$ veces y por cada iteración se produce una llamada bloqueante de tiempo aleatorio entre $bmin$ y $bmax$, para un respectivo pid. Ese número aleatorio se arma usando una función llamada ''$rand()$'' que genera un número aleatorio cualquiera y lo que hacemos es dividirlo por la diferencia entre $bmax$ y $bmin + 1$, quedándonos con el resto y a eso sumarle $bmin$ para acomodarlo entre el rango $[bmin, bmax]$. \\
+
 
 \subsection{Ejercicio 2}
-TODO: AGREGAR ALGO
+
+En este ejercicio escribimos un lote de 3 tareas con 1 intensiva de cpu y 2 taskConsola. 
+El objetivo es ver un ejemplo interesante donde el algoritmo FCFS no tiene un buen rendimiento,
+especialmente para procesadores de un núcleo. \\
+
+\noindent
+A continuación mostraremos el lote de tareas elegido:
+\verbatiminput{graficos/corrida1_eje2.tsk}
+
+Las 3 tareas llegan en el mismo instante (en el instante 1), la primer taskConsola produce una sola llamada bloqueante pero entre 15 y 20 ticks de reloj, la segunda taskConsola ejecuta 6 llamadas bloqueantes pero cada una entre 1 y 2 ticks de reloj y la tarea CPU utiliza 5 ticks de reloj. \\
+
+Básicamente tenemos:
+\begin{itemize}
+	\item 1 tarea CPU intensiva.
+	\item 1 taskConsola que solo ejecuta una llamada bloqueante pero de muchos ciclos de reloj
+	\item 1 taskConsola que ejecuta 6 llamadas bloqueantes pero de pocos ciclos de reloj.
+\end{itemize}
+
+\begin{center}
+\includegraphics[scale=0.4]{graficos/imagen1.png}
+\end{center}
+
+Para un solo núcleo el problema que surge para la tarea CPU es que como el scheduler decidió que primero se ejecuten las dos taskConsola (a pesar de haber llegado las 3 al mismo tiempo), la tarea CPU tiene que esperar a que terminen las dos taskConsola para luego poder ejecutar solo 5 ciclos de reloj. \\
+
+Si la tarea CPU hubiese llegado 1 solo ciclo de reloj antes se podría haber evitado la espera de las dos taskConsola y se hubiese ejecutado primero, reduciendo muchísimo su tiempo de espera. 
+Otros de los puntos negativos es que la primer taskConsola tiene un tiempo de bloqueo muy grande lo que hace que se pierda mucho tiempo esperando que se resuelva y la segunda no tiene ningún bloqueo grande pero tiene 6 bloqueos de 1 o 2 ticks de reloj lo que hace que se pierda muchísimo tiempo con la cpu bloqueda esperando algún evento de entrada/salida por ejemplo. \\
+
+\begin{center}
+\includegraphics[scale=0.4]{graficos/imagen2.png}
+\end{center}
+
+En el caso en que tenemos 2 núcleos cambia mucho el panorama con respecto al de un núcleo.
+Porque si bien otra vez la tareaCpu no es la elegida por el scheduler para comenzar, arrancan las dos taskConsola a la vez y la taskConsola2 de muchos ticks cortos no tiene que esperar a que termine de ejecutarse la primera, evitando así la taskConsola de un bloqueo grande, reduciendo muchísimo el tiempo de espera de la taskConsola2.\\
+
+\begin{center}
+\includegraphics[scale=0.4]{graficos/imagen3.png}
+\end{center}
+
+Y el caso donde tenemos 3 núcleos es el ideal, ya que ninguna de las tareas tiene que esperar a que termine de ejecutarse la otra, todas empiezan a ejecutarse inmediatamente después de llegar al scheduler reduciendo drásticamente el tiempo de espera con respecto a los casos anteriores. \\
+
+\noindent
+Tick final de la ejecución de la última de las 3 tareas:
+\begin{itemize}
+	\item 1 núcleo: 45
+	\item 2 núcleos: 26
+	\item 3 núcleos: 20
+\end{itemize}
+
+\noindent
+Mediciones del tiempo de espera para el algoritmo FCFS (en ticks unidades de tiempo):
+\begin{itemize}
+	\item Para 1 núcleo: 19,66
+	\item Para 2 núcleos: 10,25 (52,14% con respecto al de 1 núcleo)
+	\item Para 3 núcleos: 2,5 (12,72% con respecto al de 1 núcleo)
+\end{itemize}
+
+\noindent
+Mediciones del turnaround para el algoritmo FCFS (en ticks unidades de tiempo):
+\begin{itemize}
+	\item Para 1 núcleo: 33,33
+	\item Para 2 núcleos: 22 (66% con respecto al de 1 núcleo)
+	\item Para 3 núcleos: 16 (48% con respecto al de 1 núcleo)
+\end{itemize}
+
 
 \subsection{Ejercicio 3}
 
@@ -140,10 +207,47 @@ Al programar mantuvimos el invariante de que en cada momento se trata de ejecuta
 
 
 \subsection{Ejercicio 6}
-TODO: AGREGAR ALGO
+
+La tarea taskBatch lo que hace recibir dos parámetros total\_cpu y cant\_bloqueos, y realizar
+cant\_bloqueos llamadas bloqueantes en momentos aleatorios. Cada llamada bloqueante durará 1
+tick de reloj y el uso total de cpu va a ser total\_cpu. \\
+
+Lo primero que hacemos es preguntar si total\_cpu es menor que cant\_bloqueos ya que si eso pasa,
+la taskBatch no va a ser posible realizarla de forma correcta ya que necesitamos 1 tick de reloj por
+cada llamada bloqueante. \\
+
+Luego construimos un vector de unos y ceros, donde las posiciones van a simular ticks de reloj.
+Generamos el número aleatorio y vamos rellenando de ceros el vector hasta que llegamos a la
+posición del número aleatorio y ahí seteamos con 1 para saber en que momentos hacer las llamadas
+bloqueantes. \\
+
+A medida que vamos completando el vector, reducimos en 1 la cantidad total de ticks que tenemos
+y la cantidad de bloqueos, para no realizar mas llamadas bloqueantes de las que tenemos que
+realizar. \\
+
+Una vez que terminamos de construir el vector, me creo una variable que se va a llamar
+cpu\_acumulado que sirve para saber cuanto cpu voy a utilizar hasta que se realice la proxima
+llamada bloqueante. \\
+
+Llamo a la función uso\_cpu, luego hago una llamada bloqueante de 1 tick de reloj, pongo en 0 la
+variable cpu\_acumulado y vuelvo a realizar lo mismo hasta cumplir con todas las llamadas
+bloqueantes. \\
+
+Por último, si realice todas las llamadas bloqueantes pero no gaste todo el cpu que me habian dado
+(total\_cpu) entonces realizo una llamada con uso\_cpu con todo el cpu restante.\\
+
 
 \subsection{Ejercicio 7}
-TODO: AGREGAR ALGO
+
+Como mencionamos anteriormente, la duración del quantum resulta de vital importancia para la performance del scheduler de Round Robin. Si el quantum es demasiado largo, el algoritmo tiende a comportarse como FCFS, extendiendo mucho los tiempos de espera. Si por el contrario el quantum es demasiado corto, se pagará el costo de estar cambiando de contexto muy a menudo.\\
+
+\noindent
+Utilizaremos dos métricas para evaluar la performance del scheduling, que intentaremos optimizar:
+\begin{itemize}
+	\item \textbf{Tiempo de Espera} es la suma del tiempo que un proceso pasa en la cola de ready. Indica cuánto tiempo tuvo que esperar un proceso para ejecutarse.
+	\item \textbf{Eficiencia de CPU} lo tomaremos como el tiempo que se estuvo utilizando el CPU para realizar procesamiento, en relación con el tiempo total que le insumió al sistema completar las tareas. Nos dará una medida de la eficiencia con la que están siendo utilizados los recursos. Es decir, contaremos los cambios de contexto y los ciclos IDLE como ineficientes, mientras que contaremos como ciclos productivos aquellos en los que las tareas se están ejecutando.
+\end{itemize}
+
 
 \subsection{Ejercicio 8}
 
