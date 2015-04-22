@@ -146,7 +146,57 @@ TODO: AGREGAR ALGO
 TODO: AGREGAR ALGO
 
 \subsection{Ejercicio 8}
-TODO: AGREGAR ALGO
+
+El algoritmo de Round Robin implementado en el ejercicio 3 no efectúa ningún tipo de restricciones con respecto a los cores utilizados por los distintos procesos. Es decir, cuando una determinada tarea se encuentra en ready, podrá ser ejecutada en el primer procesador disponible. Dado que migrar un proceso a otro core conlleva un costo, podría resultar útil contar con un algoritmo de Round Robin que limite estos cambios entre procesadores. En este ejercicio implementamos una simulación de Round Robin en la cual no se permite el cambio entre procesadores. Esto significa que a cada tarea se le asigna un procesador determinado al momento del load, y luego toda su ejecución será en ese procesador.\\
+
+Para implementar el simulador, se requirieron algunas estructuras adicionales, para garantizar que cada tarea se mantenga en el mismo procesador:
+\begin{itemize}
+	\item Un mapa de entero a entero, donde se almacena la afinidad de los procesos con los procesadores. La clave es el PID, y a cada uno le corresponde un core determinado. Al PID se le asigna el procesador al momento del load, y se elimina del mapa cuando la tarea finaliza su ejecución.
+	\item Un mapa de entero a entero donde se almacena la cantidad de tareas activas por core. Al momento del load de una tarea, se utiliza para determinar cuál es el core con menor cantidad de tareas activas, y se le asigna este core a la nueva tarea. Este contador se incrementa al momento del load, y se decrementa cuando la tarea finaliza su ejecución.
+	\item Un vector de colas de ready, donde se cuenta con una cola para cada core. Cada tarea es encolada en la cola respectiva a su core, y al momento de buscar una tarea para un core determinado, el mismo sólo lo hará en la cola que tiene asignada.
+	\item Un mapa que almacena el proceso y el tiempo restante que cuenta para correr en cada core.
+\end{itemize}
+
+El algoritmo es análogo al utilizado en el ejercicio 3, teniendo en cuenta que cada core utilizará sólo la cola que le corresponde, y que se mantiene un contador de procesos activos por core como se mencionó previamente.\\
+
+Existen casos en los que restringir el cambio de core produce mejores resultados que permitir que los procesos migren de core. Un ejemplo sería cuando se cuenta con muchas tareas interactivas. Las tareas interactivas se bloquean esperando una respuesta, y cuando se reactivan lo hacen por poco tiempo. En estos casos, el cambio de core produce una penalidad muy grande, en comparación con el tiempo que se está procesando.\\
+
+\noindent
+Tomemos el siguiente caso, con 2 cores y un quantum de 6:
+\verbatiminput{graficos/corrida1_eje8.tsk}
+
+Con Round Robin con migración de cores, una corrida produce el siguiente resultado: \\
+
+\begin{center}
+\includegraphics[scale=0.4]{graficos/ej8_RR_1.png}
+\end{center}
+
+La misma corrida sin migración de cores consume unos 20 ciclos menos de CPU para finalizar: \\
+
+\begin{center}
+\includegraphics[scale=0.4]{graficos/ej8_RR2_1.png}
+\end{center}
+
+Existen casos en los que, en cambio, es conveniente migrar de cores. Consideremos un lote de tareas que se encuentran intercaladas entre tareas de larga duración y tareas cortas. El algoritmo de Round Robin sin migración de cores no sabe identificar este caso, por lo que quedarán acumuladas las tareas largas en un core, y las cortas en otro. Luego el segundo core quedará ocioso, mientras las otras tareas tienen que compartir el único core que tienen asignado hasta finalizar.\\
+
+\noindent
+Consideremos el siguiente lote:
+\verbatiminput{graficos/corrida2_eje8.tsk}
+
+Corrida con Round Robin con migración de cores: \\
+
+\begin{center}
+\includegraphics[scale=0.4]{graficos/ej8_RR_2.png}
+\end{center}
+
+Corrida con Round Robin sin migración de cores: \\
+
+\begin{center}
+\includegraphics[scale=0.4]{graficos/ej8_RR2_2.png}
+\end{center}
+
+Notar que a partir del ciclo 38 el core 0 se encuentra ocioso, mientras aín quedan 4 tareas por completar en el core 1.\\
+
 
 \subsection{Ejercicio 9}
 
