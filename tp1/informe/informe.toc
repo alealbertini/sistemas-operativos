@@ -3,12 +3,12 @@
 \contentsline {section}{\numberline {2}Desarrollo}{4}{section.2}
 \contentsline {subsection}{\numberline {2.1}Ejercicio 1}{4}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Ejercicio 2}{4}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Ejercicio 3}{4}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Ejercicio 4}{5}{subsection.2.4}
-\contentsline {subsection}{\numberline {2.5}Ejercicio 5}{8}{subsection.2.5}
-\contentsline {subsection}{\numberline {2.6}Ejercicio 6}{10}{subsection.2.6}
-\contentsline {subsection}{\numberline {2.7}Ejercicio 7}{10}{subsection.2.7}
-\contentsline {subsection}{\numberline {2.8}Ejercicio 8}{10}{subsection.2.8}
-\contentsline {subsection}{\numberline {2.9}Ejercicio 9}{10}{subsection.2.9}
-\contentsline {subsection}{\numberline {2.10}Ejercicio 10}{11}{subsection.2.10}
-\contentsline {section}{\numberline {3}Conclusiones}{13}{section.3}
+\contentsline {subsection}{\numberline {2.3}Ejercicio 3}{6}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Ejercicio 4}{7}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Ejercicio 5}{10}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}Ejercicio 6}{12}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.7}Ejercicio 7}{12}{subsection.2.7}
+\contentsline {subsection}{\numberline {2.8}Ejercicio 8}{13}{subsection.2.8}
+\contentsline {subsection}{\numberline {2.9}Ejercicio 9}{16}{subsection.2.9}
+\contentsline {subsection}{\numberline {2.10}Ejercicio 10}{17}{subsection.2.10}
+\contentsline {section}{\numberline {3}Conclusiones}{19}{section.3}
