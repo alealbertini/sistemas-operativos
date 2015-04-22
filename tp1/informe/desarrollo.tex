@@ -10,7 +10,7 @@ TODO: AGREGAR ALGO
 
 \noindent
 
-El algoritmo de scheduling de Round Robin (RR) está diseñado específicamente para cumplir con las necesidades de los sistemas de time-sharing. Es similar al scheduler FCFS, con la adición de desalojo (o preemption), lo cual le permite al sistema intercambiar los procesos en ejecución. Se define un quantum, que es una pequeña unidad de tiempo, por lo general de 10 a 100 milisegundos de longitud. La cola de ''listos'' (ready) se trata como una cola circular. El scheduler recorre la cola, asignando CPU a cada proceso por a los sumo 1 quantum de tiempo.
+El algoritmo de scheduling de Round Robin\cite{silberschatz2009operating} (RR) está diseñado específicamente para cumplir con las necesidades de los sistemas de time-sharing. Es similar al scheduler FCFS, con la adición de desalojo (o preemption), lo cual le permite al sistema intercambiar los procesos en ejecución. Se define un quantum, que es una pequeña unidad de tiempo, por lo general de 10 a 100 milisegundos de longitud. La cola de ''listos'' (ready) se trata como una cola circular. El scheduler recorre la cola, asignando CPU a cada proceso por a los sumo 1 quantum de tiempo.
 Para implementar RR, mantenemos la cola de ready como una cola FIFO de procesos. Los nuevos procesos son añadidos al final de la cola.  El CPU toma el primer proceso de la cola de ready, establece un timer para interrumpir luego de 1 quantum, y realiza el dispatch del proceso. \\
 
 Luego pueden suceder una de dos cosas: 
@@ -88,7 +88,7 @@ Como se observa en los gráficos, este es un caso más ''feliz'', donde el costo
 
 \subsection{Ejercicio 5}
 
-El paper se centra en la problemática de programar varias tareas con un solo procesador en un determinado contexto.
+El paper\cite{liu1973scheduling} se centra en la problemática de programar varias tareas con un solo procesador en un determinado contexto.
 Dicho contexto establece que las tareas tiene que cumplir un deadline y hay que garantizar el cumplimiento de este. \\
 
 

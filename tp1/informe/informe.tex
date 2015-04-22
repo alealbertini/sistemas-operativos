@@ -35,6 +35,7 @@
 
 \usepackage[showlabels,sections,floats,textmath,displaymath]{preview}
 
+%\usepackage[nottoc]{tocbibind}
 
 % Esto sirve para incluir palabras claves
 \newcommand{\keywords}[1]{\par\vskip11pt\hskip10pt\noindent{\small{\bf Palabras Claves\/}: #1}}
@@ -92,8 +93,10 @@
 %\include{discusion}
 \include{conclusiones}
 
-%\bibliographystyle{plain}
-%\bibliography{tp3}
+\appendix
+\bibliographystyle{unsrt}
+\bibliography{informe}
+%\addcontentsline{toc}{chapter}{Bibliography}
 
 \end{document}
 

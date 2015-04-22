@@ -1,0 +1,14 @@
+\begin{thebibliography}{1}
+
+\bibitem{silberschatz2009operating}
+Abraham Silberschatz.
+\newblock {\em Operating system concepts}.
+\newblock J. Wiley \& Sons, Hoboken, NJ, 2009.
+
+\bibitem{liu1973scheduling}
+Chung~Laung Liu and James~W Layland.
+\newblock Scheduling algorithms for multiprogramming in a hard-real-time
+  environment.
+\newblock {\em Journal of the ACM (JACM)}, 20(1):46--61, 1973.
+
+\end{thebibliography}
