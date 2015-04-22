@@ -7,10 +7,84 @@ TODO: AGREGAR ALGO
 TODO: AGREGAR ALGO
 
 \subsection{Ejercicio 3}
-TODO: AGREGAR ALGO
+
+\noindent
+
+El algoritmo de scheduling de Round Robin (RR) está diseñado específicamente para cumplir con las necesidades de los sistemas de time-sharing. Es similar al scheduler FCFS, con la adición de desalojo (o preemption), lo cual le permite al sistema intercambiar los procesos en ejecución. Se define un quantum, que es una pequeña unidad de tiempo, por lo general de 10 a 100 milisegundos de longitud. La cola de ''listos'' (ready) se trata como una cola circular. El scheduler recorre la cola, asignando CPU a cada proceso por a los sumo 1 quantum de tiempo.
+Para implementar RR, mantenemos la cola de ready como una cola FIFO de procesos. Los nuevos procesos son añadidos al final de la cola.  El CPU toma el primer proceso de la cola de ready, establece un timer para interrumpir luego de 1 quantum, y realiza el dispatch del proceso. \\
+
+Luego pueden suceder una de dos cosas: 
+\begin{itemize}
+	\item El proceso utiliza CPU por menos que 1 quantum. En este caso el proceso mismo devolverá el CPU voluntariamente (ya sea porque terminó o porque se bloqueó). El scheduler procederá entonces con el siguiente proceso en la cola de ready. 
+	\item El proceso continúa corriendo luego de 1 quantum. En este caso el timer se disparará, elevando una interrupción al sistema operativo. Entonces se realizará un cambio de contexto, en el cual el scheduler desalojará al proceso, que sera ubicado al final de la cola de ready, y procederá con el siguiente proceso en la mencionada cola.   
+\end{itemize} 
+
+En el algoritmo de Round Robin, ningún proceso es alocado en la CPU por más tiempo que un quantum (a menos que sea el único proceso que pueda ser ejecutado). Si un proceso excede el tiempo de un quantum en CPU, el mismo es desalojado y puesto nuevamente en la cola. Round Robin es por lo tanto un algoritmo con desalojo.
+Si hay n procesos en la cola de ready y el quantum es q, entonces cada proceso recibe $1/n$ de tiempo de CPU en pedazos de a lo sumo q unidades de tiempo. Cada proceso esperará a lo sumo $(n-1)*q$ unidades de tiempo hasta su próximo quantum.   
+La performance del algoritmo de Round Robin depende, como veremos más adelante, del tamaño del quantum. En un extremo, si el quantum es demasiado largo, se comporta como si fuera FCFS. En contraste, si el quantum es extremadamente corto, esto se denomina procesador compartido, y (en teoría) crea la apariencia de que cada uno de los $n$ procesos cuenta con su propio procesador corriendo a $1/n$ veces la velocidad real del procesador. \\
+
+En esta sección nos propusimos simular un algoritmo de Round Robin que permita el intercambio entre procesadores. Esto significa, en este caso, que cada proceso recibirá el primer procesador libre que se encuentre, sin importar que sea o no el mismo procesador en el que se haya ejecutado previamente.
+Para lograrlo, utilizamos las siguientes estructuras auxiliares: 
+\begin{itemize}
+	\item Una cola de ready, que contiene los PID de los procesos que están listos para ser ejecutados.
+	\item Un mapa que almacena el proceso y el tiempo restante que cuenta para correr en cada core.
+\end{itemize} 
+
+El scheduler se inicializa con la tarea IDLE corriendo en cada core. El quantum asignado a la tarea IDLE es siempre cero, para que pueda ser desalojada a continuación por cualquier tarea ''real'' que requiera el uso de CPU. \\
+
+Con cada tick del reloj, se evalúa qué hacer según el motivo del mismo: 
+\begin{itemize}
+	\item Si es un bloqueo, se remueve al proceso del CPU y el mismo renuncia a su quantum restante. El mismo será colocado de vuelta al final de la cola de ready cuando se reciba la señal de que se ha desbloqueado. Si hay un proceso disponible en la cola de ready, se le asignará ese core y se establecerá su tiempo disponible como el total del quantum. Caso contrario, se asignará un ciclo de ejecución en ese core a la tarea IDLE.
+	\item Si el proceso ha finalizado, se remueve el proceso del CPU, y se procede al siguiente en la cola como  en el caso anterior.
+	\item Si el proceso continúa en ejecución, se decrementa su tiempo disponible en CPU. Si ha excedido su quantum, será desalojado y puesto en el final de la cola de ready. Se retornará como proceso siguiente al primero de la cola, que podría ser el mismo proceso si no hubiera otro disponible.
+\end{itemize}
 
 \subsection{Ejercicio 4}
-TODO: AGREGAR ALGO
+
+Se realizaron distintas corridas del algoritmo Round Robin, para ilustrar su comportamiento: \\
+
+\noindent
+Corrida 1:
+\verbatiminput{graficos/corrida1_eje4.tsk}
+
+\begin{center}
+\includegraphics[scale=0.4]{graficos/rr_lotes2.png}
+\end{center}
+
+Como se puede observar, los procesos liberan el CPU al bloquearse. También se observa que los mismos cambian de procesador, como es el caso del 0 y el 2. Se nota en estos casos la penalidad de 2 ciclos por cambio de procesador (añadida a los 2 ciclos de cambio de contexto).  En este caso el quantum de ambos procesadores es 4. \\
+
+\noindent
+Corrida 2:
+\verbatiminput{graficos/corrida2_eje4.tsk}
+
+\begin{center}
+\includegraphics[scale=0.4]{graficos/rr2.png}
+\end{center}
+
+En este caso corren 4 tareas de cpu, y una de consola. El quantum es de 4 ciclos y se cuenta con 2 procesadores. Se puede observar como las tareas comparten el uso de CPU y son desalojadas al finalizar su quantum. También se observa que el scheduler, por simplicidad de implementación, no identifica en qué procesador estaba corriendo la tarea, causando una penalidad extra de cambio de procesador. También se observa que los tiempos de espera son bastante elevados en este caso.
+
+\begin{center}
+\includegraphics[scale=0.4]{graficos/out_cores_timeline.png}
+\end{center}
+
+En el gráfico anterior se observa más claramente que el algoritmo no es muy eficiente en este caso, ya que se está inviertiendo mucho tiempo en cambios de contexto (es casi lo mismo que el tiempo de ejecución real de las tareas).\\
+
+\noindent
+Corrida 3:
+\verbatiminput{graficos/corrida3_eje4.tsk}
+
+Se corrió en este caso con 2 cores y quantum 4. En este caso no se incluyeron tareas interactivas.
+
+\begin{center}
+\includegraphics[scale=0.4]{graficos/rr_loteRR3.png}
+\end{center}
+
+Como se observa en los gráficos, este es un caso más ''feliz'', donde el costo de cambio de contexto es mucho menor, y la utilización del CPU es más eficiente (más uso en ejecución de las tareas que en cambios de contexto)
+
+\begin{center}
+\includegraphics[scale=0.4]{graficos/out_cores_timeline1.png}
+\end{center}
+
 
 \subsection{Ejercicio 5}
 
