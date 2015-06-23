@@ -1,23 +1,14 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.20)  22 APR 2015 20:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.6.3)  3 JUN 2015 12:06
 entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
 **informe.tex
-
-(C:\Users\XA03955\mobaxterm\home\tp1\sistemas-operativos\tp1\informe\informe.te
-x
-LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
-abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
-croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
-ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
- lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
-german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
-ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
-an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
-ishmax, welsh, loaded.
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\base\article.cls
+(./informe.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 78 languages loaded.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\base\size11.clo
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/size11.clo
 File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -32,22 +23,22 @@ File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\geometry\geometry.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\graphics\keyval.sty
-Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\generic\oberdiek\ifpdf.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\generic\oberdiek\ifvtex.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\generic\ifxetex\ifxetex.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count87
@@ -62,27 +53,15 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layouthoffset=\dimen109
 \Gm@layoutvoffset=\dimen110
 \Gm@dimlist=\toks15
-
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\geometry\geometry.cfg))
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\babel\babel.sty
-Package: babel 2014/09/25 3.9l The Babel package
-
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\babel\switch.def
-File: switch.def 2014/09/25 3.9l Babel switching mechanism
 )
-*************************************
-* Local config file bblopts.cfg used
-*
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\00miktex\bblopts.cfg
-File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
-)
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\babel-spanish\spanish.ldf
+(/usr/local/texlive/2014/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2014/03/24 3.9k The Babel package
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/babel-spanish/spanish.ldf
 Language: spanish.ldf 2014/04/24 v5.0n Spanish support from the babel system
 
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\babel\babel.def
-File: babel.def 2014/09/25 3.9l Babel common definitions
-
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\generic\config\language.def)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2014/03/24 3.9k Babel common definitions
 \babel@savecnt=\count90
 \U@D=\dimen111
 )
@@ -94,19 +73,19 @@ Package babel Info: Making < an active character on input line 662.
 Package babel Info: Making > an active character on input line 662.
 Package babel Info: Making ' an active character on input line 680.
 ))
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\base\inputenc.sty
-Package: inputenc 2008/03/30 v1.1d Input encoding file
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2014/04/30 v1.2b Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
 
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\base\utf8.def
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\base\t1enc.dfu
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/t1enc.dfu
 File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -256,7 +235,7 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\base\ot1enc.dfu
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ot1enc.dfu
 File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -287,7 +266,7 @@ File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\base\omsenc.dfu
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/omsenc.dfu
 File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -311,54 +290,52 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\graphics\color.sty
-Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2014/04/23 v1.1a Standard LaTeX Color (DPC)
 
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\00miktex\color.cfg
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 130.
+Package color Info: Driver file: pdftex.def on input line 137.
 
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\pdftex-def\pdftex.def
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\generic\oberdiek\infwarerr.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\generic\oberdiek\ltxcmds.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count92
 ))
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\graphics\graphicx.sty
-Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\graphics\graphics.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\graphics\trig.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\00miktex\graphics.cfg
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 )
 \Gin@req@height=\dimen112
 \Gin@req@width=\dimen113
 )
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\hyperref\hyperref.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\generic\oberdiek\hobsub-hyperref
-.sty
-Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
 
 
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\generic\oberdiek\hobsub-generic.
-sty
-Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
-Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
 Package hobsub Info: Skipping package `ltxcmds' (already loaded).
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
@@ -387,30 +364,32 @@ Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
 )
 Package hobsub Info: Skipping package `hobsub' (already loaded).
 Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
-Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
 Package: xcolor-patch 2011/01/30 xcolor patch
 Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
 Package atveryend Info: \enddocument detected (standard20110627).
 Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
-) (C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\oberdiek\auxhook.sty
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
-) (C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\oberdiek\kvoptions.sty
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
 \@linkdim=\dimen114
 \Hy@linkcounter=\count93
 \Hy@pagecounter=\count94
 
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\hyperref\pd1enc.def
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
 \Hy@SavedSpaceFactor=\count95
 
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\00miktex\hyperref.cfg
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 4319.
@@ -423,7 +402,7 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
 \c@Hy@tempcnt=\count96
 
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\url\url.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -448,19 +427,19 @@ LaTeX Info: Redefining \pageref on input line 6369.
 
 Package hyperref Message: Driver: hpdftex.
 
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\hyperref\hpdftex.def
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
 \Fld@listcount=\count101
 \c@bookmark@seq@number=\count102
 
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\oberdiek\rerunfilecheck.st
-y
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip43
-) (C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\float\float.sty
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count103
 \float@exts=\toks19
@@ -468,13 +447,13 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks20
 \@floatcapt=\box27
 )
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\tools\verbatim.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks21
 \verbatim@line=\toks22
 \verbatim@in@stream=\read1
 )
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\amsfonts\amsfonts.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks23
 \symAMSa=\mathgroup4
@@ -482,24 +461,24 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\amsmath\amsmath.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip44
 
 For additional information on amsmath, use the `?' option.
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\amsmath\amstext.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\amsmath\amsgen.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks24
 \ex@=\dimen118
 ))
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\amsmath\amsbsy.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen119
 )
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\amsmath\amsopn.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count104
@@ -540,18 +519,18 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\xcolor\xcolor.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\00miktex\color.cfg
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
 
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\colortbl\colortbl.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\tools\array.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/array.sty
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen127
 \extrarowheight=\dimen128
@@ -574,23 +553,18 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\preview\preview.sty
-Package: preview 2010/02/14 11.88 (AUCTeX/preview-latex)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/preview/preview.sty
+Package: preview 2010/02/14 11.86 (AUCTeX/preview-latex)
 
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\preview\prshowlabels.def))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/preview/prshowlabels.def))
 \c@proposition=\count117
 
-(C:\Users\XA03955\mobaxterm\home\tp1\sistemas-operativos\tp1\informe\informe.au
-x
+(./informe.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
+ (./introduccion.aux) (./desarrollo.aux) (./conclusiones.aux))
+\openout1 = `informe.aux'.
 
-(C:\Users\XA03955\mobaxterm\home\tp1\sistemas-operativos\tp1\informe\introducci
-on.aux)
-(C:\Users\XA03955\mobaxterm\home\tp1\sistemas-operativos\tp1\informe\desarrollo
-.aux)
-(C:\Users\XA03955\mobaxterm\home\tp1\sistemas-operativos\tp1\informe\conclusion
-es.aux))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
 LaTeX Font Info:    ... okay on input line 50.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
@@ -642,7 +616,7 @@ LaTeX Font Info:    ... okay on input line 50.
 
 LaTeX Info: Redefining \. on input line 50.
 LaTeX Info: Redefining \% on input line 50.
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\context\base\supp-pdf.mkii
+(/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count118
 \scratchdimen=\dimen129
@@ -655,14 +629,28 @@ LaTeX Info: Redefining \% on input line 50.
 \MPnumerator=\count122
 \makeMPintoPDFobject=\count123
 \everyMPtoPDFconversion=\toks32
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 )
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 \AtBeginShipoutBox=\box31
 Package hyperref Info: Link coloring ON on input line 50.
- (C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\hyperref\nameref.sty
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\generic\oberdiek\gettitlestring.
-sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count124
@@ -671,24 +659,22 @@ LaTeX Info: Redefining \ref on input line 50.
 LaTeX Info: Redefining \pageref on input line 50.
 LaTeX Info: Redefining \nameref on input line 50.
 
-(C:\Users\XA03955\mobaxterm\home\tp1\sistemas-operativos\tp1\informe\informe.ou
-t)
-(C:\Users\XA03955\mobaxterm\home\tp1\sistemas-operativos\tp1\informe\informe.ou
-t)
+(./informe.out) (./informe.out)
 \@outlinefile=\write3
- <escudo.png, id=55, 1224.575pt x 1198.4775pt>
+\openout3 = `informe.out'.
+
+ <escudo.png, id=56, 1224.575pt x 1198.4775pt>
 File: escudo.png Graphic file (type png)
- <use escudo.png>
+
+<use escudo.png>
 Package pdftex.def Info: escudo.png used on input line 56.
 (pdftex.def)             Requested size: 81.9406pt x 80.18968pt.
 LaTeX Font Info:    Try loading font information for U+msa on input line 67.
-
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\amsfonts\umsa.fd
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 67.
-
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\amsfonts\umsb.fd
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 Package babel Info: Redefining spanish shorthand <<
@@ -717,14 +703,15 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 85.
  [1
 
-{C:/Users/XA03955/miktex-portable-2.9.5105/pdftex/config/pdftex.map} <C:/Users/
-XA03955/mobaxterm/home/tp1/sistemas-operativos/tp1/informe/escudo.png>]
-(C:\Users\XA03955\mobaxterm\home\tp1\sistemas-operativos\tp1\informe\informe.to
-c
+{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./escud
+o.png>]
+(./informe.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
 \tf@toc=\write4
+\openout4 = `informe.toc'.
+
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 90.
 Package babel Info: Redefining spanish shorthand >>
@@ -750,8 +737,9 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 90.
  [2]
-(C:\Users\XA03955\mobaxterm\home\tp1\sistemas-operativos\tp1\informe\introducci
-on.tex
+\openout2 = `introduccion.aux'.
+
+ (./introduccion.tex
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 1.
 Package babel Info: Redefining spanish shorthand >>
@@ -792,8 +780,9 @@ Package babel Info: Redefining spanish shorthand "?
  [3
 
 ]
-(C:\Users\XA03955\mobaxterm\home\tp1\sistemas-operativos\tp1\informe\desarrollo
-.tex
+\openout2 = `desarrollo.aux'.
+
+ (./desarrollo.tex
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 1.
 Package babel Info: Redefining spanish shorthand >>
@@ -851,7 +840,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--21
 
  []
 
-<graficos/imagen1.png, id=90, 1030.85126pt x 187.70125pt>
+<graficos/imagen1.png, id=91, 1030.85126pt x 187.70125pt>
 File: graficos/imagen1.png Graphic file (type png)
 
 <use graficos/imagen1.png>
@@ -889,13 +878,12 @@ Package babel Info: Redefining spanish shorthand "?
 [4
 
 
- <C:/Users/XA03955/mobaxterm/home/tp1/sistemas-operativos/tp1/informe/graficos/
-imagen1.png (PNG copy)>]
+ <./graficos/imagen1.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 35--37
 
  []
 
-<graficos/imagen2.png, id=97, 1030.85126pt x 187.70125pt>
+<graficos/imagen2.png, id=98, 1030.85126pt x 187.70125pt>
 File: graficos/imagen2.png Graphic file (type png)
 
 <use graficos/imagen2.png>
@@ -906,7 +894,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--44
 
  []
 
-<graficos/imagen3.png, id=98, 1030.85126pt x 187.70125pt>
+<graficos/imagen3.png, id=99, 1030.85126pt x 187.70125pt>
 File: graficos/imagen3.png Graphic file (type png)
 
 <use graficos/imagen3.png>
@@ -941,9 +929,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 64.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 64.
-[5 <C:/Users/XA03955/mobaxterm/home/tp1/sistemas-operativos/tp1/informe/grafico
-s/imagen2.png (PNG copy)> <C:/Users/XA03955/mobaxterm/home/tp1/sistemas-operati
-vos/tp1/informe/graficos/imagen3.png (PNG copy)>]
+[5 <./graficos/imagen2.png (PNG copy)> <./graficos/imagen3.png (PNG copy)>]
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 76.
 Package babel Info: Redefining spanish shorthand >>
@@ -1013,7 +999,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 111--112
  []
 
 File: graficos/corrida1_eje4.tsk  (verbatim)
-<graficos/rr_lotes2.png, id=110, 1030.85126pt x 187.70125pt>
+<graficos/rr_lotes2.png, id=111, 1030.85126pt x 187.70125pt>
 File: graficos/rr_lotes2.png Graphic file (type png)
 
 <use graficos/rr_lotes2.png>
@@ -1049,13 +1035,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--122
  []
 
 File: graficos/corrida2_eje4.tsk  (verbatim)
-<graficos/rr2.png, id=116, 1030.85126pt x 247.92625pt>
+<graficos/rr2.png, id=117, 1030.85126pt x 247.92625pt>
 File: graficos/rr2.png Graphic file (type png)
  <use graficos/rr2.png>
 Package pdftex.def Info: graficos/rr2.png used on input line 128.
 (pdftex.def)             Requested size: 412.33319pt x 99.16873pt.
 
-<graficos/out_cores_timeline.png, id=117, 852.786pt x 599.841pt>
+<graficos/out_cores_timeline.png, id=118, 852.786pt x 599.841pt>
 File: graficos/out_cores_timeline.png Graphic file (type png)
 
 <use graficos/out_cores_timeline.png>
@@ -1086,22 +1072,20 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 135.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 135.
- [8 <C:/Users/XA03955/mobaxterm/home/tp1/sistemas-operativos/tp1/informe/grafic
-os/rr_lotes2.png (PNG copy)> <C:/Users/XA03955/mobaxterm/home/tp1/sistemas-oper
-ativos/tp1/informe/graficos/rr2.png (PNG copy)>]
+ [8 <./graficos/rr_lotes2.png (PNG copy)> <./graficos/rr2.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 137--138
 
  []
 
 File: graficos/corrida3_eje4.tsk  (verbatim)
-<graficos/rr_loteRR3.png, id=123, 1030.85126pt x 278.03876pt>
+<graficos/rr_loteRR3.png, id=124, 1030.85126pt x 278.03876pt>
 File: graficos/rr_loteRR3.png Graphic file (type png)
 
 <use graficos/rr_loteRR3.png>
 Package pdftex.def Info: graficos/rr_loteRR3.png used on input line 146.
 (pdftex.def)             Requested size: 412.33319pt x 111.21352pt.
 
-<graficos/out_cores_timeline1.png, id=124, 852.786pt x 599.841pt>
+<graficos/out_cores_timeline1.png, id=125, 852.786pt x 599.841pt>
 File: graficos/out_cores_timeline1.png Graphic file (type png)
 
 <use graficos/out_cores_timeline1.png>
@@ -1132,9 +1116,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 153.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 153.
- [9 <C:/Users/XA03955/mobaxterm/home/tp1/sistemas-operativos/tp1/informe/grafic
-os/out_cores_timeline.png> <C:/Users/XA03955/mobaxterm/home/tp1/sistemas-operat
-ivos/tp1/informe/graficos/rr_loteRR3.png (PNG copy)>]
+ [9 <./graficos/out_cores_timeline.png> <./graficos/rr_loteRR3.png (PNG copy)>]
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 156.
 Package babel Info: Redefining spanish shorthand >>
@@ -1206,8 +1188,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 179.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 179.
-[10 <C:/Users/XA03955/mobaxterm/home/tp1/sistemas-operativos/tp1/informe/grafic
-os/out_cores_timeline1.png>]
+[10 <./graficos/out_cores_timeline1.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 180--181
 
  []
@@ -1413,7 +1394,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 272--273
 
  []
 
-<graficos/ej8_RR_1.png, id=151, 1030.85126pt x 308.15125pt>
+<graficos/ej8_RR_1.png, id=152, 1030.85126pt x 308.15125pt>
 File: graficos/ej8_RR_1.png Graphic file (type png)
 
 <use graficos/ej8_RR_1.png>
@@ -1424,7 +1405,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 278--279
 
  []
 
-<graficos/ej8_RR2_1.png, id=152, 1030.85126pt x 308.15125pt>
+<graficos/ej8_RR2_1.png, id=153, 1030.85126pt x 308.15125pt>
 File: graficos/ej8_RR2_1.png Graphic file (type png)
 
 <use graficos/ej8_RR2_1.png>
@@ -1460,14 +1441,13 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 288.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 288.
-[14 <C:/Users/XA03955/mobaxterm/home/tp1/sistemas-operativos/tp1/informe/grafic
-os/ej8_RR_1.png (PNG copy)> <C:/Users/XA03955/mobaxterm/home/tp1/sistemas-opera
-tivos/tp1/informe/graficos/ej8_RR2_1.png (PNG copy)>]
+[14 <./graficos/ej8_RR_1.png (PNG copy)> <./graficos/ej8_RR2_1.png (PNG copy)>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 290--291
 
  []
 
-<graficos/ej8_RR_2.png, id=157, 1030.85126pt x 338.26375pt>
+<graficos/ej8_RR_2.png, id=158, 1030.85126pt x 338.26375pt>
 File: graficos/ej8_RR_2.png Graphic file (type png)
 
 <use graficos/ej8_RR_2.png>
@@ -1478,7 +1458,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 296--297
 
  []
 
-<graficos/ej8_RR2_2.png, id=158, 1030.85126pt x 338.26375pt>
+<graficos/ej8_RR2_2.png, id=159, 1030.85126pt x 338.26375pt>
 File: graficos/ej8_RR2_2.png Graphic file (type png)
 
 <use graficos/ej8_RR2_2.png>
@@ -1513,9 +1493,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 303.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 303.
-[15 <C:/Users/XA03955/mobaxterm/home/tp1/sistemas-operativos/tp1/informe/grafic
-os/ej8_RR_2.png (PNG copy)> <C:/Users/XA03955/mobaxterm/home/tp1/sistemas-opera
-tivos/tp1/informe/graficos/ej8_RR2_2.png (PNG copy)>]
+[15 <./graficos/ej8_RR_2.png (PNG copy)> <./graficos/ej8_RR2_2.png (PNG copy)>]
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 305.
 Package babel Info: Redefining spanish shorthand >>
@@ -1534,14 +1512,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 309--313
  []
 
 File: graficos/lotes_ej9.tsk  (verbatim)
-<graficos/eje9_fixed.png, id=163, 1030.85126pt x 338.26375pt>
+<graficos/eje9_fixed.png, id=165, 1030.85126pt x 338.26375pt>
 File: graficos/eje9_fixed.png Graphic file (type png)
 
 <use graficos/eje9_fixed.png>
 Package pdftex.def Info: graficos/eje9_fixed.png used on input line 320.
 (pdftex.def)             Requested size: 412.33319pt x 135.30309pt.
 
-<graficos/eje9_dynamic.png, id=164, 1030.85126pt x 338.26375pt>
+<graficos/eje9_dynamic.png, id=166, 1030.85126pt x 338.26375pt>
 File: graficos/eje9_dynamic.png Graphic file (type png)
 
 <use graficos/eje9_dynamic.png>
@@ -1571,9 +1549,8 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 330.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 330.
- [16 <C:/Users/XA03955/mobaxterm/home/tp1/sistemas-operativos/tp1/informe/grafi
-cos/eje9_fixed.png (PNG copy)> <C:/Users/XA03955/mobaxterm/home/tp1/sistemas-op
-erativos/tp1/informe/graficos/eje9_dynamic.png (PNG copy)>]
+ [16 <./graficos/eje9_fixed.png (PNG copy)> <./graficos/eje9_dynamic.png (PNG c
+opy)>]
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 335.
 Package babel Info: Redefining spanish shorthand >>
@@ -1592,14 +1569,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 339--343
  []
 
 File: graficos/lotes_eje10.tsk  (verbatim)
-<graficos/eje10_Fixed.png, id=169, 1030.85126pt x 157.58875pt>
+<graficos/eje10_Fixed.png, id=171, 1030.85126pt x 157.58875pt>
 File: graficos/eje10_Fixed.png Graphic file (type png)
 
 <use graficos/eje10_Fixed.png>
 Package pdftex.def Info: graficos/eje10_Fixed.png used on input line 350.
 (pdftex.def)             Requested size: 412.33319pt x 63.03436pt.
 
-<graficos/eje10_Dynamic.png, id=170, 1030.85126pt x 157.58875pt>
+<graficos/eje10_Dynamic.png, id=172, 1030.85126pt x 157.58875pt>
 File: graficos/eje10_Dynamic.png Graphic file (type png)
 
 <use graficos/eje10_Dynamic.png>
@@ -1608,7 +1585,7 @@ Package pdftex.def Info: graficos/eje10_Dynamic.png used on input line 356.
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 359.
 
 
-(C:\Users\XA03955\miktex-portable-2.9.5105\tex\latex\base\omscmr.fd
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
@@ -1638,9 +1615,8 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 91.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 91.
- [17 <C:/Users/XA03955/mobaxterm/home/tp1/sistemas-operativos/tp1/informe/grafi
-cos/eje10_Fixed.png (PNG copy)> <C:/Users/XA03955/mobaxterm/home/tp1/sistemas-o
-perativos/tp1/informe/graficos/eje10_Dynamic.png (PNG copy)>]
+ [17 <./graficos/eje10_Fixed.png (PNG copy)> <./graficos/eje10_Dynamic.png (PNG
+ copy)>]
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 91.
 Package babel Info: Redefining spanish shorthand >>
@@ -1666,8 +1642,10 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 91.
  [18]
-(C:\Users\XA03955\mobaxterm\home\tp1\sistemas-operativos\tp1\informe\conclusion
-es.tex
+\openout2 = `conclusiones.aux'.
+
+
+(./conclusiones.tex
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 1.
 Package babel Info: Redefining spanish shorthand >>
@@ -1713,9 +1691,7 @@ Package babel Info: Redefining spanish shorthand "?
  [19
 
 
-]
-(C:\Users\XA03955\mobaxterm\home\tp1\sistemas-operativos\tp1\informe\informe.bb
-l)
+] (./informe.bbl)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 101.
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 101.
@@ -1745,43 +1721,36 @@ Package babel Info: Redefining spanish shorthand "?
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 101.
-
-(C:\Users\XA03955\mobaxterm\home\tp1\sistemas-operativos\tp1\informe\informe.au
-x
+ (./informe.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
-
-(C:\Users\XA03955\mobaxterm\home\tp1\sistemas-operativos\tp1\informe\introducci
-on.aux)
-(C:\Users\XA03955\mobaxterm\home\tp1\sistemas-operativos\tp1\informe\desarrollo
-.aux)
-(C:\Users\XA03955\mobaxterm\home\tp1\sistemas-operativos\tp1\informe\conclusion
-es.aux))
+ (./introduccion.aux)
+(./desarrollo.aux) (./conclusiones.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 101.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 101.
 Package rerunfilecheck Info: File `informe.out' has not changed.
-(rerunfilecheck)             Checksum: 97AC3A27EB512F18BCA4FA4BB8B42FF2;761.
+(rerunfilecheck)             Checksum: 9FF9C7B1FBC84B084BAFBFD0B3D8EA1C;748.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 101.
  ) 
 Here is how much of TeX's memory you used:
- 8078 strings out of 493921
- 117715 string characters out of 3141668
- 218416 words of memory out of 3000000
- 11161 multiletter control sequences out of 15000+200000
- 10628 words of font info for 40 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 41i,7n,35p,757b,470s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/XA03955/miktex-portable-2.9.5105/fonts/type1/public/amsfonts/cm/cmb
-x10.pfb><C:/Users/XA03955/miktex-portable-2.9.5105/fonts/type1/public/amsfonts/
-cm/cmbx12.pfb><C:/Users/XA03955/miktex-portable-2.9.5105/fonts/type1/public/ams
-fonts/cm/cmmi10.pfb><C:/Users/XA03955/miktex-portable-2.9.5105/fonts/type1/publ
-ic/amsfonts/cm/cmr10.pfb><C:/Users/XA03955/miktex-portable-2.9.5105/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb><C:/Users/XA03955/miktex-portable-2.9.5105/fonts
-/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/XA03955/miktex-portable-2.9.5105
-/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on informe.pdf (20 pages, 674585 bytes).
+ 8078 strings out of 493117
+ 114992 string characters out of 6135434
+ 224143 words of memory out of 5000000
+ 11331 multiletter control sequences out of 15000+600000
+ 10628 words of font info for 40 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 41i,7n,35p,757b,470s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
+sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
+r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr
+/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on informe.pdf (20 pages, 654655 bytes).
 PDF statistics:
- 224 PDF objects out of 1000 (max. 8388607)
+ 227 PDF objects out of 1000 (max. 8388607)
+ 176 compressed objects within 2 object streams
  38 named destinations out of 1000 (max. 500000)
  190 words of extra memory for PDF output out of 10000 (max. 10000000)
 
