@@ -4,12 +4,12 @@
 
 La tarea TaskConsola simula una tarea interactiva en donde realiza $n$ llamadas bloqueantes de duración de tiempo aleatoria entre $bmin$ y $bmax$. Se pasa por parámetro la variable pid, y un vector con las variables $n$, $bmin$ y $bmax$, en ese orden. \\
 
-Se coloca un ciclo for donde se itera $n$ veces y por cada iteración se produce una llamada bloqueante de tiempo aleatorio entre $bmin$ y $bmax$, para un respectivo pid. Ese número aleatorio se arma usando una función llamada ''$rand()$'' que genera un número aleatorio cualquiera y lo que hacemos es dividirlo por la diferencia entre $bmax$ y $bmin + 1$, quedándonos con el resto y a eso sumarle $bmin$ para acomodarlo entre el rango $[bmin, bmax]$. \\
+Se coloca un ciclo \textit{for}, donde se itera $n$ veces y por cada iteración se produce una llamada bloqueante de tiempo aleatorio entre $bmin$ y $bmax$, para un respectivo pid. Ese número aleatorio se arma usando una función llamada ``$rand()$'' que genera un número aleatorio cualquiera y lo que hacemos es dividirlo por la diferencia entre $bmax$ y $bmin + 1$, quedándonos con el resto y a eso sumarle $bmin$ para acomodarlo entre el rango $[bmin, bmax]$. \\
 
 
 \subsection{Ejercicio 2}
 
-En este ejercicio escribimos un lote de 3 tareas con 1 intensiva de cpu y 2 taskConsola. 
+En este ejercicio escribimos un lote de 3 tareas con 1 intensiva de CPU y 2 \textit{taskConsola}. 
 El objetivo es ver un ejemplo interesante donde el algoritmo FCFS no tiene un buen rendimiento,
 especialmente para procesadores de un núcleo. \\
 
@@ -21,9 +21,9 @@ Las 3 tareas llegan en el mismo instante (en el instante 1), la primer taskConso
 
 Básicamente tenemos:
 \begin{itemize}
-	\item 1 tarea CPU intensiva.
-	\item 1 taskConsola que solo ejecuta una llamada bloqueante pero de muchos ciclos de reloj
-	\item 1 taskConsola que ejecuta 6 llamadas bloqueantes pero de pocos ciclos de reloj.
+	\item 1 intensiva en CPU.
+	\item 1 \textit{taskConsola} que solo ejecuta una llamada bloqueante pero de muchos ciclos de reloj.
+	\item 1 \textit{taskConsola} que ejecuta 6 llamadas bloqueantes pero de pocos ciclos de reloj.
 \end{itemize}
 
 \begin{center}
@@ -33,14 +33,14 @@ Básicamente tenemos:
 Para un solo núcleo el problema que surge para la tarea CPU es que como el scheduler decidió que primero se ejecuten las dos taskConsola (a pesar de haber llegado las 3 al mismo tiempo), la tarea CPU tiene que esperar a que terminen las dos taskConsola para luego poder ejecutar solo 5 ciclos de reloj. \\
 
 Si la tarea CPU hubiese llegado 1 solo ciclo de reloj antes se podría haber evitado la espera de las dos taskConsola y se hubiese ejecutado primero, reduciendo muchísimo su tiempo de espera. 
-Otros de los puntos negativos es que la primer taskConsola tiene un tiempo de bloqueo muy grande lo que hace que se pierda mucho tiempo esperando que se resuelva y la segunda no tiene ningún bloqueo grande pero tiene 6 bloqueos de 1 o 2 ticks de reloj lo que hace que se pierda muchísimo tiempo con la cpu bloqueda esperando algún evento de entrada/salida por ejemplo. \\
+Otros de los puntos negativos es que la primer taskConsola tiene un tiempo de bloqueo muy grande. Esto hace que se pierda mucho tiempo esperando que se resuelva. La segunda no tiene ning\'un bloqueo grande pero tiene 6 bloqueos de 1 \'o 2 ticks de reloj, lo que hace que se pierda mucho tiempo con la CPU bloqueada, esperando por ejemplo algún evento de entrada/salida. \\
 
 \begin{center}
 \includegraphics[scale=0.4]{graficos/imagen2.png}
 \end{center}
 
 En el caso en que tenemos 2 núcleos cambia mucho el panorama con respecto al de un núcleo.
-Porque si bien otra vez la tareaCpu no es la elegida por el scheduler para comenzar, arrancan las dos taskConsola a la vez y la taskConsola2 de muchos ticks cortos no tiene que esperar a que termine de ejecutarse la primera, evitando así la taskConsola de un bloqueo grande, reduciendo muchísimo el tiempo de espera de la taskConsola2.\\
+Porque si bien otra vez la tarea CPU no es la elegida por el scheduler para comenzar, arrancan las dos taskConsola a la vez y la taskConsola2 de muchos ticks cortos no tiene que esperar a que termine de ejecutarse la primera, evitando así la taskConsola de un bloqueo grande, reduciendo muchísimo el tiempo de espera de la taskConsola2.\\
 
 \begin{center}
 \includegraphics[scale=0.4]{graficos/imagen3.png}
@@ -77,7 +77,7 @@ Mediciones del turnaround para el algoritmo FCFS (en ticks unidades de tiempo):
 
 \noindent
 
-El algoritmo de scheduling de Round Robin\cite{silberschatz2009operating} (RR) está diseñado específicamente para cumplir con las necesidades de los sistemas de time-sharing. Es similar al scheduler FCFS, con la adición de desalojo (o preemption), lo cual le permite al sistema intercambiar los procesos en ejecución. Se define un quantum, que es una pequeña unidad de tiempo, por lo general de 10 a 100 milisegundos de longitud. La cola de ''listos'' (ready) se trata como una cola circular. El scheduler recorre la cola, asignando CPU a cada proceso por a los sumo 1 quantum de tiempo.
+El algoritmo de scheduling de Round Robin\cite{silberschatz2009operating} (RR) está diseñado específicamente para cumplir con las necesidades de los sistemas de \textit{time-sharing}. Es similar al scheduler FCFS, con la adición de desalojo (o preemption), lo cual le permite al sistema intercambiar los procesos en ejecución. Se define un quantum, que es una pequeña unidad de tiempo, por lo general de 10 a 100 milisegundos de longitud. La cola de ''listos'' (ready) se trata como una cola circular. El scheduler recorre la cola, asignando CPU a cada proceso por a los sumo 1 quantum de tiempo.
 Para implementar RR, mantenemos la cola de ready como una cola FIFO de procesos. Los nuevos procesos son añadidos al final de la cola.  El CPU toma el primer proceso de la cola de ready, establece un timer para interrumpir luego de 1 quantum, y realiza el dispatch del proceso. \\
 
 Luego pueden suceder una de dos cosas: 
@@ -86,7 +86,7 @@ Luego pueden suceder una de dos cosas:
 	\item El proceso continúa corriendo luego de 1 quantum. En este caso el timer se disparará, elevando una interrupción al sistema operativo. Entonces se realizará un cambio de contexto, en el cual el scheduler desalojará al proceso, que sera ubicado al final de la cola de ready, y procederá con el siguiente proceso en la mencionada cola.   
 \end{itemize} 
 
-En el algoritmo de Round Robin, ningún proceso es alocado en la CPU por más tiempo que un quantum (a menos que sea el único proceso que pueda ser ejecutado). Si un proceso excede el tiempo de un quantum en CPU, el mismo es desalojado y puesto nuevamente en la cola. Round Robin es por lo tanto un algoritmo con desalojo.
+En el algoritmo de Round Robin, a ningún proceso se le asigna CPU por más tiempo que un quantum (a menos que sea el único proceso que pueda ser ejecutado). Si un proceso excede el tiempo de un quantum en CPU, el mismo es desalojado y puesto nuevamente en la cola. Round Robin es por lo tanto un algoritmo con desalojo.
 Si hay n procesos en la cola de ready y el quantum es q, entonces cada proceso recibe $1/n$ de tiempo de CPU en pedazos de a lo sumo q unidades de tiempo. Cada proceso esperará a lo sumo $(n-1)*q$ unidades de tiempo hasta su próximo quantum.   
 La performance del algoritmo de Round Robin depende, como veremos más adelante, del tamaño del quantum. En un extremo, si el quantum es demasiado largo, se comporta como si fuera FCFS. En contraste, si el quantum es extremadamente corto, esto se denomina procesador compartido, y (en teoría) crea la apariencia de que cada uno de los $n$ procesos cuenta con su propio procesador corriendo a $1/n$ veces la velocidad real del procesador. \\
 
@@ -156,7 +156,7 @@ Como se observa en los gráficos, este es un caso más ''feliz'', donde el costo
 \subsection{Ejercicio 5}
 
 El paper\cite{liu1973scheduling} se centra en la problemática de programar varias tareas con un solo procesador en un determinado contexto.
-Dicho contexto establece que las tareas tiene que cumplir un deadline y hay que garantizar el cumplimiento de este. \\
+Dicho contexto establece que las tareas tiene que cumplir un deadline y hay que garantizar el cumplimiento de \'este. \\
 
 
 Analizan únicamente schedulers que utilizan prioridades y que adminten desalajo (preemptive) de tareas (En particular RM, EDF y una versión mixta).\\
@@ -188,7 +188,7 @@ La demostración de que si las tareas tiene un consumo de CPU total no mayor al 
 \noindent
 \emph{Diseño de SchedFixed:} \\
 
-Se implemento con una cola de prioridad para los procesos listos, donde se asigno mayor prioridad a las tareas que tenían menor periodo (i.e. mayor frecuencia). 
+Se implemento con una cola de prioridad para los procesos listos, donde se asign\'o mayor prioridad a las tareas que tenían menor per\'iodo (i.e. mayor frecuencia). 
 
 Además generalizamos este algoritmo para más de un core y con desalajo por bloqueo.
 Nota: Sabemos que no era necesario porque en el paper solo se menciona un core y un solo recurso el CPU.
@@ -199,7 +199,7 @@ Al programar mantuvimos el invariante de que en cada momento se trata de ejecuta
 \noindent
 \emph{Diseño de SchedDynamic:} \\
 
-Se implemento con una cola de prioridad para los procesos listos y adicionalmente con un map para guardar los deadlines, si bien el deadline se guarda en la cola de listos junto a su pid en una tupla, en cuando se necesita retirar de la cola de listos (ejemplo: cuando se bloquea o esta ejecutando en algún core) se guarda temporalmente en la otra estructura.
+Se implement\'o con una cola de prioridad para los procesos listos y adicionalmente con un diccionario para guardar los deadlines, si bien el deadline se guarda en la cola de listos junto a su pid en una tupla. Cuando se necesita retirar de la cola de listos (ejemplo: cuando se bloquea o esta ejecutando en algún core) se guarda temporalmente en la otra estructura.
 
 También en este caso generalizamos a varios cores e implementamos el desalojo por bloqueo.
 
@@ -218,23 +218,19 @@ cada llamada bloqueante. \\
 
 Luego construimos un vector de unos y ceros, donde las posiciones van a simular ticks de reloj.
 Generamos el número aleatorio y vamos rellenando de ceros el vector hasta que llegamos a la
-posición del número aleatorio y ahí seteamos con 1 para saber en que momentos hacer las llamadas
+posición del número aleatorio y ahí seteamos con 1 para saber en qu\'e momentos hacer las llamadas
 bloqueantes. \\
 
 A medida que vamos completando el vector, reducimos en 1 la cantidad total de ticks que tenemos
 y la cantidad de bloqueos, para no realizar mas llamadas bloqueantes de las que tenemos que
 realizar. \\
 
-Una vez que terminamos de construir el vector, me creo una variable que se va a llamar
-cpu\_acumulado que sirve para saber cuanto cpu voy a utilizar hasta que se realice la proxima
-llamada bloqueante. \\
+Una vez que terminamos de construir el vector, creamos una variable que llamada
+\textit{cpu\_acumulado}, a fin de saber cu\'anto CPU ser\'a necesario utilizar hasta que se realice la proxima llamada bloqueante. \\
 
-Llamo a la función uso\_cpu, luego hago una llamada bloqueante de 1 tick de reloj, pongo en 0 la
-variable cpu\_acumulado y vuelvo a realizar lo mismo hasta cumplir con todas las llamadas
-bloqueantes. \\
+Llamamos a la función uso\_cpu, luego hacemos una llamada bloqueante de 1 tick de reloj de duraci\'on. Reiniciamos a 0 la variable \textit{cpu\_acumulado}, y repetimos lo mismo hasta cumplir con todas las llamadas bloqueantes. \\
 
-Por último, si realice todas las llamadas bloqueantes pero no gaste todo el cpu que me habian dado
-(total\_cpu) entonces realizo una llamada con uso\_cpu con todo el cpu restante.\\
+Por último, si realizamos todas las llamadas bloqueantes pero no agotamos todo el CPU asignado para ese proceso (\textit{total\_cpu}), entonces realizamos una llamada con \textit{uso\_cpu} para todo el CPU restante.\\
 
 
 \subsection{Ejercicio 7}
@@ -304,7 +300,7 @@ Notar que a partir del ciclo 38 el core 0 se encuentra ocioso, mientras aín que
 
 \subsection{Ejercicio 9}
 
-Para mostrar con un ejemplo un caso que no sea factible para el scheduler RM y si lo sea para EDF nos basto el siguiente lote de 2 tareas periodicas:
+Para mostrar con un ejemplo un caso que no sea factible para el scheduler RM y s\'i lo sea para EDF nos bast\'o el siguiente lote de 2 tareas peri\'odicas:
 
 Nota: Para simplicar el ejemplo consideramos en este caso despreciable el tiempo de cambio de contexto.
 \\
