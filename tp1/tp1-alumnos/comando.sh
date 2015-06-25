@@ -15,7 +15,7 @@ then
 fi
 FILE_SALIDA=salida_$(basename ${FILE})_.csv
 rm -f ${FILE_SALIDA}
-for core in $(echo ${CONFIG_QUANTUM}); do 
+for core in $(echo ${CONFIG_CORES}); do 
 for quant in $(echo ${CONFIG_QUANTUM}); do
 echo "Corrida para ${FILE} con ${core} cores y ${quant} como quantum iterando ${CONFIG_VECES} veces...";
 for i in $(seq 1 ${CONFIG_VECES}); do
