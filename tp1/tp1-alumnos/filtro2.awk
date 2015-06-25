@@ -2,7 +2,7 @@ BEGIN {
 	count = 0;
 	ncore_var="1";
 	if(ncore!=""){
-		ncore_var==ncore;
+		ncore_var=ncore;
 	}
 }
 
