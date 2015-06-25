@@ -29,7 +29,7 @@ END {
 	gsub("\\.",",",salida);
 	print salida;
 
-	salida="";
+	salida="0;";
 	for(iter3=0; iter3<total_campos; iter3++){
 		desviacion_estandar = suma[iter3]*suma[iter3]/count;
 		desviacion_estandar = (suma_cuadrados[iter3] - desviacion_estandar)/(count-1);
