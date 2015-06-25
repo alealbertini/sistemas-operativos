@@ -1,5 +1,9 @@
 BEGIN {
 	count = 0;
+	ncore_var="1";
+	if(ncore!=""){
+		ncore_var==ncore;
+	}
 }
 
 {
@@ -14,6 +18,7 @@ BEGIN {
 	count++;
 }
 END {
+	salida = ncore_var";";
 	salida = "";
 	for(iter2=0; iter2<total_campos; iter2++){
 		promedio = suma[iter2]/count;
