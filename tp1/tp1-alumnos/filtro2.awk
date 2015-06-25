@@ -4,6 +4,10 @@ BEGIN {
 	if(ncore!=""){
 		ncore_var=ncore;
 	}
+	quantum_var="1";
+	if(quantum!=""){
+		quantum_var=quantum;
+	}
 }
 
 {
@@ -18,7 +22,7 @@ BEGIN {
 	count++;
 }
 END {
-	salida = ncore_var";";
+	salida = ncore_var";"quantum_var";";
 	for(iter2=0; iter2<total_campos; iter2++){
 		promedio = suma[iter2]/count;
 		if(iter2!=0){
@@ -29,7 +33,7 @@ END {
 	gsub("\\.",",",salida);
 	print salida;
 
-	salida="0;";
+	salida="0;0;";
 	for(iter3=0; iter3<total_campos; iter3++){
 		desviacion_estandar = suma[iter3]*suma[iter3]/count;
 		desviacion_estandar = (suma_cuadrados[iter3] - desviacion_estandar)/(count-1);
