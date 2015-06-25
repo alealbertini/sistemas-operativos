@@ -8,6 +8,10 @@ BEGIN {
 	if(quantum!=""){
 		quantum_var=quantum;
 	}
+	print_varianza_var="on";
+	if(print_varianza!=""){
+		print_varianza_var="off";
+	}
 }
 
 {
@@ -33,17 +37,19 @@ END {
 	gsub("\\.",",",salida);
 	print salida;
 
-	salida="0;0;";
-	for(iter3=0; iter3<total_campos; iter3++){
-		desviacion_estandar = suma[iter3]*suma[iter3]/count;
-		desviacion_estandar = (suma_cuadrados[iter3] - desviacion_estandar)/(count-1);
-		desviacion_estandar = sqrt(desviacion_estandar);
-		if(iter3!=0){
-			salida=salida";";
+	if(print_varianza_var=="on"){
+		salida="0;0;";
+		for(iter3=0; iter3<total_campos; iter3++){
+			desviacion_estandar = suma[iter3]*suma[iter3]/count;
+			desviacion_estandar = (suma_cuadrados[iter3] - desviacion_estandar)/(count-1);
+			desviacion_estandar = sqrt(desviacion_estandar);
+			if(iter3!=0){
+				salida=salida";";
+			}
+			salida=salida""desviacion_estandar;
 		}
-		salida=salida""desviacion_estandar;
+		gsub("\\.",",",salida);
+		print salida;
 	}
-	gsub("\\.",",",salida);
-	print salida;
 }
 
