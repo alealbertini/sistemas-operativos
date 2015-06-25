@@ -19,7 +19,6 @@ BEGIN {
 }
 END {
 	salida = ncore_var";";
-	salida = "";
 	for(iter2=0; iter2<total_campos; iter2++){
 		promedio = suma[iter2]/count;
 		if(iter2!=0){
