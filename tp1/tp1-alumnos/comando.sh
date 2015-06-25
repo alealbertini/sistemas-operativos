@@ -1,7 +1,7 @@
 #!/bin/bash
 CONFIG_CORES="1 2 4 6 8"
-CONFIG_QUANTUM=$(seq 1 2 10)
-CONFIG_VECES=20
+CONFIG_QUANTUM=$(seq 1 2 100)
+CONFIG_VECES=500
 if [ -z "$1" ];
 then
 	echo "Uso: comando.sh <archivo.tsk>"
