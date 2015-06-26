@@ -2,7 +2,10 @@
 #include <iostream>
 #include <cstdlib>
 #include <unistd.h>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5fd646c0decd4321f341d8955c4d11478997c134
 using namespace std;
 
 void TaskCPU(int pid, vector<int> params) { // params: n
@@ -46,7 +49,11 @@ void TaskBatch(int pid, vector<int> params){
                 total_cpu = cant_bloqueos;
 
         //Inicializamos la semilla de la secuencia de numeros aleatorios.
+<<<<<<< HEAD
+        srand((unsigned)time(NULL)*getpid());
+=======
         srand((unsigned)time(NULL) * getpid());
+>>>>>>> 5fd646c0decd4321f341d8955c4d11478997c134
 
         //En este vector vamos a guardar los ticks en los que hay llamadas bloqueantes
         //ticks_bloq[i] == 1 => en el tick i se usa CPU y hay una llamada bloqueante.
