@@ -62,12 +62,19 @@ void TaskBatch(int pid, vector<int> params){
                 //Nos posicionamos en el tick_elegido
                 //buscamos el iesimo 0 salteando los 1
                 int contador=0;
-                for(int i=0; contador!=tick_elegido; i++)
+		int i;
+		//Salteamos los primeros que estan bloqueados.
+		i=0;
+		while(ticks_bloq[i]==1 && i<total_cpu) 
+				i++;
+
+                for(; contador!=tick_elegido; i++)
                         if(ticks_bloq[i]==0)
                                         contador++;
-
+		if(contador!=0)
+			i--;
                 //Seteamos la llamada bloqueante.
-                ticks_bloq[contador] = 1;
+                ticks_bloq[i] = 1;
 
                 //actualizamos, queda un tick menos y una llamada bloqueante menos.
                 cant_bloqueos--;
