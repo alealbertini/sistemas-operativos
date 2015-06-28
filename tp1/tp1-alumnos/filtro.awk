@@ -154,4 +154,6 @@ function print_extra_stats(){
 		print "core:",iter8;
 		print "\tidle_core["iter8"] =", idle_core[iter8];
 	}
-	print "---------------- end extra stats ---------------------"
+	print "---------------- end extra stats ---------------------";
+}
+
