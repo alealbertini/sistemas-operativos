@@ -19,4 +19,4 @@ for core in $(echo ${CONFIG_CORES}); do
 for quant in $(echo ${CONFIG_QUANTUM}); do
 echo "Corrida para ${FILE} con ${core} cores y ${quant} como quantum iterando ${CONFIG_VECES} veces...";
 for i in $(seq 1 ${CONFIG_VECES}); do
-./simusched ejercicio7.tsk ${core} 1 2 SchedRR ${quant} 2>/dev/null | awk -f filtro.awk; done | awk  -v ncore=${core} -v quantum=${quant} -v print_varianza="off"  -f filtro2.awk >> ${FILE_SALIDA}; done; done
+./simusched ${FILE} ${core} 1 2 SchedRR ${quant} 2>/dev/null | awk -f filtro.awk; done | awk  -v ncore=${core} -v quantum=${quant} -v print_varianza="off"  -f filtro2.awk >> ${FILE_SALIDA}; done; done
