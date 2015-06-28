@@ -273,33 +273,81 @@ Con 6 y 8 cores, las mejor\'ias al aumentar el quantum fueron menos notorias, au
 	\includegraphics[scale=0.4]{graficos/8cores_loteNormal.png}
 \end{center}
 
-Curiosamente, el valor del quantum en el que se estabilizaron result\'o similar para todas las configuraciones, ubic\'andose en torno a los 15 ciclos de duraci\'on. \\ 
+El valor del quantum en el que se estabilizaron result\'o similar para todas las configuraciones de cores, ubic\'andose en torno a los 15 ciclos de duraci\'on. \\ 
 
+La mejor\'ia en la eficiencia del uso de CPU resulta creciente dado que a mayor quantum ser\'an necesarios menos cambios de contexto para finalizar las tareas. Alcanzado un valor de quantum suficientemente grande, los cambios de contexto son menos notorios, lo cual hace que nuevos incrementos del quantum no produzcan efectos relevantes en la eficiencia de CPU.\\
+Los tiempos de espera disminuyen al aumentar el quantum, ya que esto implica que los procesos ser\'an desalojados menos veces durante su ciclo de vida. Nuevamente, a partir de un cierto quantum, los incrementos ya no producen mejoras. Esto se produce debido a que el tiempo extra que reciben los procesos en ejecuci\'on se compensa con el tiempo adicional que deber\'an pasar en la cola de listos. \\
 
-El segundo lote utilizado fue uno con tareas que se bloquean una \'unica vez:
+El segundo lote utilizado fue uno con tareas que no bloquean:
 \verbatiminput{graficos/ejercicio7_pocobloqueo.tsk}
 
-Observamos que este lote se comportó de manera muy similar al anterior.
+Para 1 core, observamos una tendencia similar al caso anterior, aunque el punto donde se estabilizan los valores de las m\'etricas se vio desplazado. En este caso, la eficiencia del CPU, el \'ultimo tick y el tiempo de espera m\'aximo alcanzan su l\'imite en torno a un quantum de alrededor de 27 ciclos de duraci\'on. Sin embargo, se observa una ca\'ida sostenida del tiempo de espera promedio hasta alcanzar un quantum de alrededor de 50 ciclos.
 
 \begin{center}
 	\includegraphics[scale=0.4]{graficos/1core_loteNoBloqueante.png}
 \end{center}
 
-Esto se repiti\'o para todas las configuraciones de cores.
+Para 2 cores, se observa una mejor\'ia m\'as pronunciada al incrementar el quantum en los valores m\'as bajos. Sin embargo, aen este caso todos los par\'ametros parecen encontrar su l\'imite en torno a un quantum de 50 ciclos.
+\begin{center}
+	\includegraphics[scale=0.4]{graficos/2cores_loteNoBloqueante.png}
+\end{center}
+
+Para una configuraci\'on de 4 cores, los valores fueron m\'as fluctuantes, y no se nota una clara mejor\'ia para quantums superiores a los 35 ciclos. Sin embargo, los valores de las m\'etricas s\'i se estabilizaron superando los 50 ciclos, lo cual pareciera indicar que el scheduling se comporta de manera m\'as predecible para este quantum.
 \begin{center}
 	\includegraphics[scale=0.4]{graficos/4cores_loteNoBloqueante.png}
 \end{center}
 
-El lote de tareas con mucho bloqueo arroj\'o resultados an\'alogos. \\
+A partir de los 6 cores, no parece haber suficiente carga en el sistema como para identificar un quantum \'optimo. De cualquier manera, observamos un efecto similar al caso de 4 cores, donde los valores ya no fluct\'uan tanto para quantums superiores a los 50 ciclos. 
+\begin{center}
+	\includegraphics[scale=0.4]{graficos/6cores_loteNoBloqueante.png} \\
+\end{center}
 
-Una explicaci\'on posible para los resultados similares entre los distintos lotes es que si bien las configuraciones de las tareas cambi\'o, mantuvimos la configuraci\'on de los tiempos de arribo y duraci\'on de las tareas en el af\'an de obtener resultados comparables. Como las tareas de tipo \textit{taskBatch} se mantienen bloqueadas \'unicamente por un ciclo (por definici\'on del ejercicio 6), las mismas vuelven a la cola de \textit{ready} casi inmediatamente, por lo que el hecho de bloquearse no afecta tanto como podr\'ia suponerse. A su vez, estas tareas se bloquean seguido, por lo que las aquellas que se bloquearon antes recuperan r\'apidamente el uso del CPU.
 
-Lo que observamos en los casos anteriores muestra c\'omo un quantum mayor aumenta el rendimiento de CPU. Esto es as\'i porque proporcionalmente estar\'a m\'as tiempo en ejecuci\'on que realizando cambios de contexto entre tareas. El tiempo de espera disminuye ya que el lote se encontraba diseñado de manera pareja, y las tareas eran de duraciones similares. De esta forma, el mayor quantum favorece a que algunas tareas finalicen antes, eliminando la necesidad de esperar otra vuelta hasta su pr\'oximo turno. \\
+El siguiente lote fue una configuraci\'on con tareas que se bloquean muchas veces:
 
-Podr\'ian existir casos en los que esto no funcione de igual manera. Si tomamos un lote de tareas donde ingresan primero algunas de muy larga duraci\'on, para luego llegar muchas tareas cortas, encontraremos que al aumentar el quantum estaremos favoreciendo a ls tareas que llegaron primero. Sin embargo, el tiempo de espera de las tareas cortas podr\'ia empeorar. Consideremos el siguiente lote:
+\verbatiminput{graficos/ejercicio7_demasiadobloqueo.tsk}
 
+En este caso pareciera no influir demasiado el quantum. \\
+
+\begin{center}
+	\includegraphics[scale=0.4]{graficos/1core_loteMuyBloqueante.png} \\
+\end{center}
+
+Se observa que quantums extremadamente cortos afectan negativamente el desempeño del \textit{scheduling}, aunque el mismo se mantiene estable para valores a partir de los 7 ciclos de duraci\'on para las m\'etricas consideradas. 
+
+\begin{center}
+	\includegraphics[scale=0.4]{graficos/2cores_loteMuyBloqueante.png} \\
+\end{center}
+
+\begin{center}
+	\includegraphics[scale=0.4]{graficos/8cores_loteMuyBloqueante.png} \\
+\end{center}
+
+
+El \'ultimo lote que consideramos para las pruebas fue uno compuesto inicialmente por tareas muy largas, a las que luego se le adicionan tareas de menor duraci\'on:
 \verbatiminput{graficos/ejercicio7_largasycortas.tsk}
- 
+
+En los casos anteriores, observamos que aumentar el valor del quantum produjo resultados o bien positivos o despreciables. Incluimos este escenario para ilustrar que para algunas configuraciones de tareas, aumentar el quantum podr\'ia traer efectos negativos.
+
+\begin{center}
+	\includegraphics[scale=0.4]{graficos/1core_loteCortasLargas.png} \\
+\end{center}
+
+Para 1 core, observamos tendencias asint\'oticas similares a los ejemplos anteriores en las m\'etricas de eficiencia de CPU, \'ultimo tick y tiempo de espera m\'aximo. Sin embargo, en este caso el tiempo de espera promedio se comport\'o de manera diferente. Observamos que el mismo decreci\'o abruptamente, tuvo una meseta entre los 13 y los 17 ciclos de quantum, y luego comienza a incrementarse nuevamente. Al ampliar la duraci\'on del quantum, las tareas m\'as cortas deben esperar mucho tiempo hasta que finalicen las primeras tareas que son m\'as largas. Esto explica la pendiente ascendente a partir de los 19 ciclos de quantum. La mejor\'ia inicial previa a los 9 ciclos viene dada por el tiempo de espera de las tareas largas, que tendr\'an que esperar muchas vueltas de tareas cortas antes de obtener el uso del CPU nuevamente. \\  
+
+\begin{center}
+	\includegraphics[scale=0.4]{graficos/2cores_loteCortasLargas.png} \\
+\end{center}
+
+Para dos cores los n\'umeros ya no son tan estables. Esto podr\'ia explicarse en el hecho de que son 3 las tareas de larga duraci\'on, por lo que hay un core que tendr\'a una carga diferente a la del otro. En este caso no observamos una tendencia creciente tan clara para el tiempo de espera promedio. A su vez, pareciera ser necesario un quantum m\'as largo, en torno a los 45 ciclos de duraci\'on, para estabilizar la eficiencia en el uso de CPU. \\
+
+\begin{center}
+	\includegraphics[scale=0.4]{graficos/4cores_loteCortasLargas.png} \\
+\end{center}
+
+A partir de los 4 cores la carga de los cores comienza a ser despareja, habiendo uno de ellos que no correr\'a una tarea larga. Las m\'etricas en este caso fluct\'uan y el an\'alisis resulta no concluyente. \\
+
+A partir de las experiencias realizadas, podemos decir que la selecci\'on del quantum para un algoritmo de \textit{scheduling} resulta crucial con respecto a su impacto en la performance. Los resultados obtenidos en esta pr\'actica nos demuestran que el quantum elegido para un caso de uso no necesariamente ser\'a el mejor para todos los casos. Identificar un quantum \'optimo no es en absoluto trivial, y requiere un an\'alisis exhaustivo de los casos de uso de cada sistema, identificando las caracter\'isticas m\'as comunes de los procesos y realizando las optimizaciones acordes.
 
 \subsection{Ejercicio 8}
 

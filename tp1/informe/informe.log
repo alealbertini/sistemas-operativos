@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.6.3)  28 JUN 2015 15:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.6.3)  28 JUN 2015 20:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1407,7 +1407,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 276--277
 
  []
 
-File: graficos/ejercicio7_pocobloqueo.tsk  (verbatim)
+
+Underfull \hbox (badness 10000) in paragraph at lines 278--280
+
+ []
+
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 280.
 Package babel Info: Redefining spanish shorthand >>
@@ -1434,336 +1438,483 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 280.
 [14 <./graficos/2cores_loteNormal.png> <./graficos/4cores_loteNormal.png> <./gr
 aficos/8cores_loteNormal.png>]
+File: graficos/ejercicio7_pocobloqueo.tsk  (verbatim)
+
 <graficos/1core_loteNoBloqueante.png, id=164, 579.1236pt x 316.0608pt>
 File: graficos/1core_loteNoBloqueante.png Graphic file (type png)
 
 <use graficos/1core_loteNoBloqueante.png>
 Package pdftex.def Info: graficos/1core_loteNoBloqueante.png used on input line
- 285.
+ 287.
 (pdftex.def)             Requested size: 231.64532pt x 126.42207pt.
 
-<graficos/4cores_loteNoBloqueante.png, id=165, 567.5604pt x 333.4056pt>
+<graficos/2cores_loteNoBloqueante.png, id=165, 571.4148pt x 374.3586pt>
+File: graficos/2cores_loteNoBloqueante.png Graphic file (type png)
+
+<use graficos/2cores_loteNoBloqueante.png>
+Package pdftex.def Info: graficos/2cores_loteNoBloqueante.png used on input lin
+e 292.
+(pdftex.def)             Requested size: 228.56186pt x 149.74078pt.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 293.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 293.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 293.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 293.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 293.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 293.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 293.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 293.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 293.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 293.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 293.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 293.
+ [15 <./graficos/1core_loteNoBloqueante.png>]
+<graficos/4cores_loteNoBloqueante.png, id=172, 567.5604pt x 333.4056pt>
 File: graficos/4cores_loteNoBloqueante.png Graphic file (type png)
 
 <use graficos/4cores_loteNoBloqueante.png>
 Package pdftex.def Info: graficos/4cores_loteNoBloqueante.png used on input lin
-e 290.
+e 297.
 (pdftex.def)             Requested size: 227.02013pt x 133.35986pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 293--294
+<graficos/6cores_loteNoBloqueante.png, id=173, 565.1514pt x 356.532pt>
+File: graficos/6cores_loteNoBloqueante.png Graphic file (type png)
+
+<use graficos/6cores_loteNoBloqueante.png>
+Package pdftex.def Info: graficos/6cores_loteNoBloqueante.png used on input lin
+e 302.
+(pdftex.def)             Requested size: 226.05655pt x 142.61026pt.
+File: graficos/ejercicio7_demasiadobloqueo.tsk  (verbatim)
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 308.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 308.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 308.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 308.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 308.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 308.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 308.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 308.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 308.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 308.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 308.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 308.
+ [16 <./graficos/2cores_loteNoBloqueante.png> <./graficos/4cores_loteNoBloquean
+te.png> <./graficos/6cores_loteNoBloqueante.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 310--311
 
  []
 
+<graficos/1core_loteMuyBloqueante.png, id=181, 579.1236pt x 316.0608pt>
+File: graficos/1core_loteMuyBloqueante.png Graphic file (type png)
 
-Underfull \hbox (badness 10000) in paragraph at lines 297--298
+<use graficos/1core_loteMuyBloqueante.png>
+Package pdftex.def Info: graficos/1core_loteMuyBloqueante.png used on input lin
+e 313.
+(pdftex.def)             Requested size: 231.64532pt x 126.42207pt.
 
- []
+<graficos/2cores_loteMuyBloqueante.png, id=182, 571.4148pt x 374.3586pt>
+File: graficos/2cores_loteMuyBloqueante.png Graphic file (type png)
 
+<use graficos/2cores_loteMuyBloqueante.png>
+Package pdftex.def Info: graficos/2cores_loteMuyBloqueante.png used on input li
+ne 319.
+(pdftex.def)             Requested size: 228.56186pt x 149.74078pt.
+
+<graficos/8cores_loteMuyBloqueante.png, id=183, 564.1878pt x 365.6862pt>
+File: graficos/8cores_loteMuyBloqueante.png Graphic file (type png)
+
+<use graficos/8cores_loteMuyBloqueante.png>
+Package pdftex.def Info: graficos/8cores_loteMuyBloqueante.png used on input li
+ne 323.
+(pdftex.def)             Requested size: 225.67111pt x 146.27188pt.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 298.
+(babel)             in language  on input line 324.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 298.
+(babel)             in language  on input line 324.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 298.
+(babel)             in language  on input line 324.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 298.
+(babel)             in language  on input line 324.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 298.
+(babel)             in language  on input line 324.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 298.
+(babel)             in language  on input line 324.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 298.
+(babel)             in language  on input line 324.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 298.
+(babel)             in language  on input line 324.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 298.
+(babel)             in language  on input line 324.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 298.
+(babel)             in language  on input line 324.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 298.
+(babel)             in language  on input line 324.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 298.
-[15 <./graficos/1core_loteNoBloqueante.png> <./graficos/4cores_loteNoBloqueante
-.png>]
+(babel)             in language  on input line 324.
+ [17 <./graficos/1core_loteMuyBloqueante.png> <./graficos/2cores_loteMuyBloquea
+nte.png>]
 File: graficos/ejercicio7_largasycortas.tsk  (verbatim)
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 304.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 304.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 304.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 304.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 304.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 304.
 
-Underfull \hbox (badness 10000) in paragraph at lines 306--307
+<graficos/1core_loteCortasLargas.png, id=190, 608.5134pt x 322.3242pt>
+File: graficos/1core_loteCortasLargas.png Graphic file (type png)
 
- []
-
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 314.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 314.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 314.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 314.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 314.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 314.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 314.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 314.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 314.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 314.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 314.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 314.
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 316--317
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 318--319
-
- []
-
-File: graficos/corrida1_eje8.tsk  (verbatim)
-
-Underfull \hbox (badness 10000) in paragraph at lines 324--325
-
- []
-
-<graficos/ej8_RR_1.png, id=177, 1030.85126pt x 308.15125pt>
-File: graficos/ej8_RR_1.png Graphic file (type png)
-
-<use graficos/ej8_RR_1.png>
-Package pdftex.def Info: graficos/ej8_RR_1.png used on input line 327.
-(pdftex.def)             Requested size: 412.33319pt x 123.2583pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 330--331
-
- []
-
-<graficos/ej8_RR2_1.png, id=178, 1030.85126pt x 308.15125pt>
-File: graficos/ej8_RR2_1.png Graphic file (type png)
-
-<use graficos/ej8_RR2_1.png>
-Package pdftex.def Info: graficos/ej8_RR2_1.png used on input line 333.
-(pdftex.def)             Requested size: 412.33319pt x 123.2583pt.
+<use graficos/1core_loteCortasLargas.png>
+Package pdftex.def Info: graficos/1core_loteCortasLargas.png used on input line
+ 333.
+(pdftex.def)             Requested size: 243.40105pt x 128.92738pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 336--337
 
  []
 
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 337.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 337.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 337.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 337.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 337.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 337.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 337.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 337.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 337.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 337.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 337.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 337.
-[17 <./graficos/ej8_RR_1.png (PNG copy)> <./graficos/ej8_RR2_1.png (PNG copy)>]
-File: graficos/corrida2_eje8.tsk  (verbatim)
+<graficos/2cores_loteCortasLargas.png, id=191, 608.5134pt x 339.669pt>
+File: graficos/2cores_loteCortasLargas.png Graphic file (type png)
 
+<use graficos/2cores_loteCortasLargas.png>
+Package pdftex.def Info: graficos/2cores_loteCortasLargas.png used on input lin
+e 339.
+(pdftex.def)             Requested size: 243.40105pt x 135.86519pt.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 340.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 340.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 340.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 340.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 340.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 340.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 340.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 340.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 340.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 340.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 340.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 340.
+ [18 <./graficos/8cores_loteMuyBloqueante.png> <./graficos/1core_loteCortasLarg
+as.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 342--343
 
  []
 
-<graficos/ej8_RR_2.png, id=183, 1030.85126pt x 338.26375pt>
-File: graficos/ej8_RR_2.png Graphic file (type png)
+<graficos/4cores_loteCortasLargas.png, id=198, 591.6504pt x 349.7868pt>
+File: graficos/4cores_loteCortasLargas.png Graphic file (type png)
 
-<use graficos/ej8_RR_2.png>
-Package pdftex.def Info: graficos/ej8_RR_2.png used on input line 345.
-(pdftex.def)             Requested size: 412.33319pt x 135.30309pt.
+<use graficos/4cores_loteCortasLargas.png>
+Package pdftex.def Info: graficos/4cores_loteCortasLargas.png used on input lin
+e 345.
+(pdftex.def)             Requested size: 236.65596pt x 139.91223pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 348--349
 
  []
 
-<graficos/ej8_RR2_2.png, id=184, 1030.85126pt x 338.26375pt>
-File: graficos/ej8_RR2_2.png Graphic file (type png)
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 352.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 352.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 352.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 352.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 352.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 352.
 
-<use graficos/ej8_RR2_2.png>
-Package pdftex.def Info: graficos/ej8_RR2_2.png used on input line 351.
-(pdftex.def)             Requested size: 412.33319pt x 135.30309pt.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 352.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 352.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 352.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 352.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 352.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 352.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 352.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 352.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 352.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 352.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 352.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 352.
- [18 <./graficos/ej8_RR_2.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 354--355
 
  []
 
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 357.
+(babel)             in language  on input line 355.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 357.
+(babel)             in language  on input line 355.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 357.
+(babel)             in language  on input line 355.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 357.
+(babel)             in language  on input line 355.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 357.
+(babel)             in language  on input line 355.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 357.
+(babel)             in language  on input line 355.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 355.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 355.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 355.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 355.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 355.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 355.
+[19 <./graficos/2cores_loteCortasLargas.png> <./graficos/4cores_loteCortasLarga
+s.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 364--365
 
-Underfull \hbox (badness 10000) in paragraph at lines 361--365
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 366--367
+
+ []
+
+File: graficos/corrida1_eje8.tsk  (verbatim)
+
+Underfull \hbox (badness 10000) in paragraph at lines 372--373
+
+ []
+
+<graficos/ej8_RR_1.png, id=206, 1030.85126pt x 308.15125pt>
+File: graficos/ej8_RR_1.png Graphic file (type png)
+
+<use graficos/ej8_RR_1.png>
+Package pdftex.def Info: graficos/ej8_RR_1.png used on input line 375.
+(pdftex.def)             Requested size: 412.33319pt x 123.2583pt.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 376.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 376.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 376.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 376.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 376.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 376.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 376.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 376.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 376.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 376.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 376.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 376.
+ [20]
+Underfull \hbox (badness 10000) in paragraph at lines 378--379
+
+ []
+
+<graficos/ej8_RR2_1.png, id=211, 1030.85126pt x 308.15125pt>
+File: graficos/ej8_RR2_1.png Graphic file (type png)
+
+<use graficos/ej8_RR2_1.png>
+Package pdftex.def Info: graficos/ej8_RR2_1.png used on input line 381.
+(pdftex.def)             Requested size: 412.33319pt x 123.2583pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 384--385
+
+ []
+
+File: graficos/corrida2_eje8.tsk  (verbatim)
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 388.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 388.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 388.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 388.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 388.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 388.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 388.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 388.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 388.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 388.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 388.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 388.
+[21 <./graficos/ej8_RR_1.png (PNG copy)> <./graficos/ej8_RR2_1.png (PNG copy)>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 390--391
+
+ []
+
+<graficos/ej8_RR_2.png, id=216, 1030.85126pt x 338.26375pt>
+File: graficos/ej8_RR_2.png Graphic file (type png)
+
+<use graficos/ej8_RR_2.png>
+Package pdftex.def Info: graficos/ej8_RR_2.png used on input line 393.
+(pdftex.def)             Requested size: 412.33319pt x 135.30309pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 396--397
+
+ []
+
+<graficos/ej8_RR2_2.png, id=217, 1030.85126pt x 338.26375pt>
+File: graficos/ej8_RR2_2.png Graphic file (type png)
+
+<use graficos/ej8_RR2_2.png>
+Package pdftex.def Info: graficos/ej8_RR2_2.png used on input line 399.
+(pdftex.def)             Requested size: 412.33319pt x 135.30309pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 402--403
+
+ []
+
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 405.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 405.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 405.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 405.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 405.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 405.
+
+Underfull \hbox (badness 10000) in paragraph at lines 409--413
 
  []
 
 File: graficos/lotes_ej9.tsk  (verbatim)
-<graficos/eje9_fixed.png, id=189, 1030.85126pt x 338.26375pt>
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 413.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 413.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 413.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 413.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 413.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 413.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 413.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 413.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 413.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 413.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 413.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 413.
+[22 <./graficos/ej8_RR_2.png (PNG copy)> <./graficos/ej8_RR2_2.png (PNG copy)>]
+<graficos/eje9_fixed.png, id=222, 1030.85126pt x 338.26375pt>
 File: graficos/eje9_fixed.png Graphic file (type png)
 
 <use graficos/eje9_fixed.png>
-Package pdftex.def Info: graficos/eje9_fixed.png used on input line 372.
+Package pdftex.def Info: graficos/eje9_fixed.png used on input line 420.
 (pdftex.def)             Requested size: 412.33319pt x 135.30309pt.
 
-<graficos/eje9_dynamic.png, id=190, 1030.85126pt x 338.26375pt>
+<graficos/eje9_dynamic.png, id=223, 1030.85126pt x 338.26375pt>
 File: graficos/eje9_dynamic.png Graphic file (type png)
 
 <use graficos/eje9_dynamic.png>
-Package pdftex.def Info: graficos/eje9_dynamic.png used on input line 378.
+Package pdftex.def Info: graficos/eje9_dynamic.png used on input line 426.
 (pdftex.def)             Requested size: 412.33319pt x 135.30309pt.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 379.
+(babel)             in language  on input line 435.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 379.
+(babel)             in language  on input line 435.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 379.
+(babel)             in language  on input line 435.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 379.
+(babel)             in language  on input line 435.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 379.
+(babel)             in language  on input line 435.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 379.
+(babel)             in language  on input line 435.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 379.
+(babel)             in language  on input line 439.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 379.
+(babel)             in language  on input line 439.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 379.
+(babel)             in language  on input line 439.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 379.
+(babel)             in language  on input line 439.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 379.
+(babel)             in language  on input line 439.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 379.
- [19 <./graficos/ej8_RR2_2.png (PNG copy)> <./graficos/eje9_fixed.png (PNG copy
-)>]
+(babel)             in language  on input line 439.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 387.
+(babel)             in language  on input line 439.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 387.
+(babel)             in language  on input line 439.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 387.
+(babel)             in language  on input line 439.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 387.
+(babel)             in language  on input line 439.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 387.
+(babel)             in language  on input line 439.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 387.
-
-Underfull \hbox (badness 10000) in paragraph at lines 391--395
+(babel)             in language  on input line 439.
+ [23 <./graficos/eje9_fixed.png (PNG copy)> <./graficos/eje9_dynamic.png (PNG c
+opy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 439--443
 
  []
 
 File: graficos/lotes_eje10.tsk  (verbatim)
-<graficos/eje10_Fixed.png, id=196, 1030.85126pt x 157.58875pt>
+<graficos/eje10_Fixed.png, id=228, 1030.85126pt x 157.58875pt>
 File: graficos/eje10_Fixed.png Graphic file (type png)
 
 <use graficos/eje10_Fixed.png>
-Package pdftex.def Info: graficos/eje10_Fixed.png used on input line 402.
+Package pdftex.def Info: graficos/eje10_Fixed.png used on input line 450.
 (pdftex.def)             Requested size: 412.33319pt x 63.03436pt.
 
-<graficos/eje10_Dynamic.png, id=197, 1030.85126pt x 157.58875pt>
+<graficos/eje10_Dynamic.png, id=229, 1030.85126pt x 157.58875pt>
 File: graficos/eje10_Dynamic.png Graphic file (type png)
 
 <use graficos/eje10_Dynamic.png>
-Package pdftex.def Info: graficos/eje10_Dynamic.png used on input line 408.
+Package pdftex.def Info: graficos/eje10_Dynamic.png used on input line 456.
 (pdftex.def)             Requested size: 412.33319pt x 63.03436pt.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 409.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 409.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 409.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 409.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 409.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 409.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 409.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 409.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 409.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 409.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 409.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 409.
- [20 <./graficos/eje9_dynamic.png (PNG copy)> <./graficos/eje10_Fixed.png (PNG 
-copy)>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 411.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 459.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 411.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 459.
 )
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 91.
@@ -1789,10 +1940,12 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 91.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 91.
- [21 <./graficos/eje10_Dynamic.png (PNG copy)>]
+ [24 <./graficos/eje10_Fixed.png (PNG copy)> <./graficos/eje10_Dynamic.png (PNG
+ copy)>]
 \openout2 = `conclusiones.aux'.
 
- (./conclusiones.tex
+
+(./conclusiones.tex
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 1.
 Package babel Info: Redefining spanish shorthand >>
@@ -1835,7 +1988,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 94.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 94.
- [22
+ [25
 
 
 ] (./informe.bbl)
@@ -1864,7 +2017,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 101.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 101.
- [23
+ [26
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 101.
@@ -1880,13 +2033,13 @@ Package rerunfilecheck Info: File `informe.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 101.
  ) 
 Here is how much of TeX's memory you used:
- 8117 strings out of 493117
- 116189 string characters out of 6135434
+ 8162 strings out of 493117
+ 117807 string characters out of 6135434
  224143 words of memory out of 5000000
- 11358 multiletter control sequences out of 15000+600000
+ 11391 multiletter control sequences out of 15000+600000
  10628 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,7n,35p,757b,470s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,7n,35p,884b,470s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
@@ -1894,10 +2047,10 @@ Here is how much of TeX's memory you used:
 sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
 r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr
 /local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on informe.pdf (23 pages, 1010228 bytes).
+Output written on informe.pdf (26 pages, 1508502 bytes).
 PDF statistics:
- 251 PDF objects out of 1000 (max. 8388607)
- 185 compressed objects within 2 object streams
- 41 named destinations out of 1000 (max. 500000)
- 220 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 281 PDF objects out of 1000 (max. 8388607)
+ 196 compressed objects within 2 object streams
+ 44 named destinations out of 1000 (max. 500000)
+ 260 words of extra memory for PDF output out of 10000 (max. 10000000)
 
